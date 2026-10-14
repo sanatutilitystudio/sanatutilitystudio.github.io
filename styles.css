@@ -56,3 +56,34 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:"Sora","Manrope",ui-sans-serif,sans
 #contact.section .eyebrow{color:#9cb9f4}
 #contact .contact-card{border-color:var(--line)}
 #contact .contact-card p,#contact .contact-email{color:var(--muted)}
+/* Product pages dark conversion: preserve layout and interactions */
+body[class*="product-"] .section,
+body[class*="product-"] .section-muted{
+  background:#05070b;
+  color:var(--text);
+}
+body[class*="product-"] .section-muted{
+  border-block-color:var(--line);
+}
+body[class*="product-"] .section .eyebrow,
+body[class*="product-"] .section-muted .eyebrow{
+  color:var(--product);
+}
+body[class*="product-"] .section-heading>p,
+body[class*="product-"] .section-muted .section-heading>p,
+body[class*="product-"] .feature-card p,
+body[class*="product-"] .availability-card p{
+  color:var(--muted);
+}
+body[class*="product-"] .section-muted .feature-card{
+  border-color:var(--line);
+}
+body[class*="product-"] .section-muted .feature-card p{
+  color:var(--muted);
+}
+body[class*="product-"] .shot{
+  border-color:var(--line);
+}
+body[class*="product-"] .contact-email{
+  color:var(--muted);
+}
