@@ -67,3 +67,14 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:"Sora","Manrope",ui-sans-serif,sans
 .home-page .site-footer{border-top:1px solid var(--line)}
 @media(max-width:980px){.home-page .hero-grid,.home-page .section-heading,.home-page .about-grid,.home-page .contact-card{grid-template-columns:1fr}.home-page .hero-grid{gap:3rem}.home-page .hero-card{max-width:700px}.home-page .app-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.home-page .hero{padding:4.3rem 0 3.8rem}.home-page .hero-card{min-height:350px}.home-page .product-stack{padding:3.5rem 1rem 1rem}.home-page .mini-card:nth-child(2),.home-page .mini-card:nth-child(3){margin-left:0}.home-page .app-grid{grid-template-columns:1fr}.home-page .home-products,.home-page .home-about,.home-page .home-contact{padding:4rem 0}}
+
+
+/* Contrast safety for cached catalogue markup during Pages propagation */
+.catalogue-section,.studio-principles,.section{background:#05070b!important;color:#f5f7fb!important}
+.catalogue-section h2,.catalogue-section h3,.catalogue-section .catalogue-name,
+.studio-principles h2,.studio-principles .principle strong,.section h2,.section h3{color:#f5f7fb!important}
+.catalogue-heading p:last-child,.catalogue-job,.catalogue-platform,.principles-copy,
+.principle span,.contact-card p,.contact-email{color:#aeb6c5!important}
+.catalogue-list,.catalogue-row,.principle-list,.principle,.contact-card{border-color:rgba(255,255,255,.14)!important}
+.catalogue-row:hover{background:rgba(255,255,255,.05)}
+.catalogue-section .eyebrow,.studio-principles .eyebrow,.section .eyebrow{color:#9cb9f4}
