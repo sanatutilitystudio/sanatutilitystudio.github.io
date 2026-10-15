@@ -18,7 +18,7 @@ h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:"Sora","Manrope",ui-sans-serif,sans
 .studio-principles{padding:5.5rem 0;border-bottom:1px solid var(--line-dark);background:var(--paper);color:var(--text-dark)}.studio-principles .eyebrow{color:#315fae}.principles-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:5rem}.principles-copy{color:var(--muted-dark);font-size:1.08rem;max-width:680px}.principle-list{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line-dark)}.principle{padding:1.35rem 1rem 1.5rem 0;border-bottom:1px solid var(--line-dark)}.principle:nth-child(odd){border-right:1px solid var(--line-dark);padding-right:1.3rem}.principle:nth-child(even){padding-left:1.3rem}.principle strong{display:block;margin-bottom:.35rem;font-family:"Sora",sans-serif}.principle span{color:var(--muted-dark);font-size:.91rem}
 .section{padding:5.5rem 0;background:var(--paper);color:var(--text-dark)}.section-heading{display:grid;grid-template-columns:1fr .78fr;gap:3rem;align-items:end;margin-bottom:2.8rem}.section-heading>p{color:var(--muted-dark);max-width:600px}.section-muted{background:var(--paper);color:var(--text-dark);border-block:0}.section-muted .eyebrow{color:#315fae}.section-muted .section-heading>p{color:var(--muted-dark)}.about-grid{display:grid;grid-template-columns:.75fr 1.25fr;gap:5rem}.about-copy{max-width:730px;color:var(--muted);font-size:1.07rem}
 .section .eyebrow{color:#315fae}.contact-card{display:grid;grid-template-columns:1.25fr .75fr;gap:2.5rem;align-items:center;padding:2.3rem 0;border-top:1px solid var(--line-dark);border-bottom:1px solid var(--line-dark)}.contact-card p{color:var(--muted-dark);max-width:680px}.contact-actions{display:flex;flex-direction:column;align-items:flex-start;gap:.8rem}.contact-email{color:var(--muted-dark);font-size:.83rem;word-break:break-all}.site-footer{border-top:1px solid var(--line);color:#8f96a3;font-size:.88rem}.footer-brand{display:flex;align-items:center;gap:.65rem}.footer-brand img{width:26px;height:26px;border-radius:6px}.footer-links{display:flex;gap:1.1rem}
-.product-kcallog{--product:#75c88c;--product-rgb:117,200,140}.product-flm{--product:#78a9e8;--product-rgb:120,169,232}.product-kilopic{--product:#628fff;--product-rgb:98,143,255}.product-audioprep{--product:#6fa3ff;--product-rgb:111,163,255}.product-april{--product:#a17bff;--product-rgb:161,123,255}.product-tb{--product:#e5a43a;--product-rgb:229,164,58}.product-srda,.srda-page{--product:#58bfe8;--product-rgb:88,191,232}
+.product-kcallog{--product:#75c88c;--product-rgb:117,200,140}.product-flm{--product:#78a9e8;--product-rgb:120,169,232}.product-kilopic{--product:#628fff;--product-rgb:98,143,255}.product-audioprep{--product:#6fa3ff;--product-rgb:111,163,255}.product-april{--product:#a17bff;--product-rgb:161,123,255}.product-tb{--product:#e5a43a;--product-rgb:229,164,58}.product-srda,.srda-page{--product:#58bfe8;--product-rgb:88,191,232}.product-tripura-paycalc{--product:#75b7ff;--product-rgb:117,183,255}
 .product-hero{padding:5.4rem 0 5rem;border-bottom:1px solid var(--line)}.product-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:4.5rem;align-items:center}.back-link{color:#969dab;font-size:.88rem}.back-link:hover{color:#fff}.product-title-row{display:flex;align-items:center;gap:1.15rem;margin:1.6rem 0}.product-icon-xl{width:76px;height:76px;border-radius:17px;object-fit:cover}.product-title-row .eyebrow{margin-bottom:.28rem;color:var(--product)}.product-title-row h1{font-size:clamp(2.8rem,5.6vw,5.1rem);margin:0}.product-lede{font-size:clamp(1.08rem,1.8vw,1.24rem);max-width:680px;color:var(--muted)}.product-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.8rem;margin:2rem 0 0}.product-hero .button:not(.button-secondary),.availability-card .button:not(.button-secondary){background:var(--product);color:#081015}
 .product-visual{padding:0;border:1px solid var(--line);border-radius:12px;background:#090d13;overflow:hidden}.product-visual img{width:100%;border-radius:0}.product-visual.icon-only{display:grid;place-items:center;min-height:410px;background:#0d121a}.product-visual.icon-only img{width:min(50%,290px);border-radius:26px}
 .feature-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}.feature-card{padding:1.5rem 1.5rem 1.65rem 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent}.feature-card:nth-child(odd){border-right:1px solid var(--line);padding-right:1.5rem}.feature-card:nth-child(even){padding-left:1.5rem}.feature-card strong{display:block;margin-bottom:.45rem;font-family:"Sora",sans-serif;font-size:1.03rem}.feature-card p{margin:0;color:var(--muted)}.section-muted .feature-card{border-color:var(--line-dark)}.section-muted .feature-card p{color:var(--muted-dark)}
@@ -87,3 +87,30 @@ body[class*="product-"] .shot{
 body[class*="product-"] .contact-email{
   color:var(--muted);
 }
+
+
+/* Shared Tripura PayCalc + legal consistency */
+.paycalc-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.paycalc-gallery .shot{border-color:var(--line);border-radius:10px;background:#0b0f15}
+.paycalc-gallery .shot img{width:100%;height:auto}
+.legal-page{--product:#75b7ff;--product-rgb:117,183,255;background:#05070b;color:var(--text)}
+.legal-main{padding:5rem 0 6rem}
+.legal-wrap{width:min(calc(100% - 2.25rem),900px);margin-inline:auto}
+.legal-hero{padding-bottom:2rem}
+.legal-hero .eyebrow{color:var(--product)}
+.legal-hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin-bottom:1rem}
+.legal-lede{max-width:760px;color:var(--muted);font-size:1.06rem}
+.legal-section{padding:1.6rem 0;border-top:1px solid var(--line)}
+.legal-section h2{font-size:1.3rem;line-height:1.3;letter-spacing:-.025em;margin-bottom:.75rem}
+.legal-section p,.legal-section li{color:#c5cbd5}
+.legal-section p{margin-bottom:.7rem}
+.legal-section ul,.legal-section ol{padding-left:1.4rem}
+.legal-section a,.legal-meta a{color:#9ec2ff;text-decoration:underline;text-underline-offset:3px}
+.legal-action-card{margin:1.4rem 0 2.4rem;padding:1.8rem;border:1px solid rgba(var(--product-rgb),.3);border-radius:14px;background:linear-gradient(135deg,rgba(var(--product-rgb),.11),rgba(255,255,255,.018))}
+.legal-action-card h2{font-size:1.45rem;margin-bottom:.5rem}
+.legal-action-card p,.legal-meta{color:var(--muted)}
+.legal-action-card .button{margin-top:.4rem;background:var(--product);color:#081015}
+.legal-tag{margin-bottom:.4rem;color:var(--product);font-size:.73rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.legal-note{margin-top:1rem;padding:1rem 1.1rem;border-left:3px solid var(--product);background:#0b1018;color:#cbd2dc}
+@media(max-width:760px){.paycalc-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.legal-main{padding:3.7rem 0 4.5rem}}
+@media(max-width:460px){.paycalc-gallery{grid-template-columns:1fr}}
