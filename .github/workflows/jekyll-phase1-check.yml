@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature/jekyll-phase1-20261017
+      - feature/phase2-content
   workflow_dispatch:
 permissions:
   contents: read

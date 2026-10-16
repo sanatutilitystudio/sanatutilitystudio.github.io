@@ -17,6 +17,7 @@ required = [
     "tripura-paycalc/data-deletion/index.html",
     "blog/index.html", "blog/search/index.html", "search.json",
     "journal.css", "journal-search.js", "feed.xml",
+    "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
 ]
 required += [
     f"blog/categories/{category}/index.html" for category in [
@@ -41,7 +42,8 @@ if (site / "sitemap.xml").exists():
             "https://sanatutilitystudio.github.io/",
             "https://sanatutilitystudio.github.io/kcallog.html",
             "https://sanatutilitystudio.github.io/tripura-paycalc/privacy-policy/",
-            "https://sanatutilitystudio.github.io/blog/"
+            "https://sanatutilitystudio.github.io/blog/",
+            "https://sanatutilitystudio.github.io/about-developer/"
         ]:
             if url not in urls:
                 errors.append("Sitemap missing important URL: " + url)
