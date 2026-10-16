@@ -1,0 +1,21 @@
+name: Validate SUS Jekyll site
+on:
+  pull_request:
+  push:
+    branches:
+      - feature/jekyll-phase1-20261017
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build with GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Validate generated website
+        run: python3 scripts/validate_site.py _site

@@ -1,0 +1,25 @@
+---
+layout: reading
+title: "Journal"
+description: "Independent development journals, practical AI experiments and sourced technology updates from Sanat Utility Studio."
+---
+<div class="container journal-wrap">
+  <header class="journal-heading"><p class="eyebrow">Sanat Utility Studio / Articles</p><h1>Apps, AI & Developer Insights.</h1><p>Notes from building useful software, learning in public, and exploring AI with a human at the controls.</p></header>
+  <nav class="journal-categories" aria-label="Article categories">
+  {% for cat in site.data.journal_categories %}<a href="/blog/categories/{{ cat.slug }}/">{{ cat.label | escape }}</a>{% endfor %}
+  </nav>
+  <div class="journal-toolbar"><h2>Latest articles</h2><a href="/blog/search/">Search articles →</a></div>
+  {% assign listed_posts = paginator.posts | default: site.posts %}
+  {% if listed_posts.size > 0 %}
+  <div class="journal-grid">{% for post in listed_posts %}{% include article-card.html post=post %}{% endfor %}</div>
+  {% else %}
+  <div class="journal-empty"><p>The journal infrastructure is ready. Articles will appear here after review and publication.</p></div>
+  {% endif %}
+  {% if paginator.total_pages > 1 %}
+  <nav class="journal-pagination" aria-label="Article pages">
+    {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}">← Newer articles</a>{% endif %}
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}">Older articles →</a>{% endif %}
+  </nav>
+  {% endif %}
+</div>

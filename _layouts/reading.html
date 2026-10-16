@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0d12">
+  <meta name="color-scheme" content="dark">
+  <title>{% if page.title %}{{ page.title | escape }} — {% endif %}Sanat Utility Studio</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/journal.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" title="Sanat Utility Studio articles" href="{{ '/feed.xml' | relative_url }}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:site_name" content="Sanat Utility Studio">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/studio-social.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  {% if page.layout == 'post' %}
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":{{ page.title | jsonify }},"description":{{ page.description | default: page.excerpt | strip_html | jsonify }},"datePublished":{{ page.date | date_to_xmlschema | jsonify }},"author":{"@type":"Person","name":{{ page.author | default: "Sanat Debbarma" | jsonify }}},"publisher":{"@type":"Organization","name":"Sanat Utility Studio","url":"https://sanatutilitystudio.github.io/"},"mainEntityOfPage":{{ page.url | absolute_url | jsonify }}}
+  </script>
+  {% endif %}
+</head>
+<body class="journal-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="/" aria-label="Sanat Utility Studio home"><img class="brand-mark" src="/assets/studio-icon.png" alt="" width="36" height="36"><span>Sanat Utility Studio</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="/#products">Apps</a><a href="/blog/">Journal</a><a href="/blog/search/">Search</a><a href="/#about">About</a>
+        <a class="button button-small" href="/">Studio home</a>
+      </nav>
+    </div>
+  </header>
+  <main class="journal-main" id="main-content">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-brand"><img src="/assets/studio-icon.png" alt="" width="26" height="26"><span>© <span id="year"></span> Sanat Utility Studio</span></div>
+      <div class="footer-links"><a href="/#products">Apps</a><a href="/blog/">Blog</a><a href="mailto:sanatutilitystudio@gmail.com">Contact</a></div>
+    </div>
+  </footer>
+  <script src="/script.js" defer></script>
+</body>
+</html>

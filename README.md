@@ -1,17 +1,22 @@
-# Sanat Utility Studio — Basic Static Website
+# Sanat Utility Studio — Website
 
-Files:
-- index.html
-- styles.css
-- script.js
+Production website: https://sanatutilitystudio.github.io/
 
-Open `index.html` directly in a browser to preview.
+This repository contains the official app portfolio and the Sanat Utility Studio journal. The original static HTML application and legal pages remain at their existing paths; GitHub Pages / Jekyll builds the new article infrastructure.
 
-Recommended deployment:
-1. Create a GitHub repository.
-2. Upload these files to the repository root.
-3. Connect the repo to Cloudflare Pages / Netlify / Vercel, or use GitHub Pages.
-4. Point your custom domain to the chosen host.
-5. Replace placeholder `href="#"` links with real app/store/privacy links.
+## Site structure
 
-Do not commit passwords, API keys, signing keys, keystores, or other secrets.
+- `index.html` — existing homepage with journal preview
+- `*.html` — retained standalone app/product pages
+- `tripura-paycalc/` — retained public legal-policy routes
+- `blog/`, `blog/categories/` — journal and category archives
+- `_layouts/`, `_includes/` — reusable Jekyll templates
+- `_posts/` — approved Markdown articles (added only after editorial review)
+- `search.json`, `journal-search.js` — static article search
+- `app-ads.txt`, `robots.txt` — important root resources
+- `jekyll-sitemap` — generates `/sitemap.xml` during the build
+- `scripts/validate_site.py` — build integrity checks
+
+Read [Publishing and validation](docs/PUBLISHING.md) before adding articles. Keep Google Play and product links, Search Console verification, and `app-ads.txt` functional. Do not commit signing keys, passwords or API credentials.
+
+Publishing is manual, and site changes require review. Phase 1 does **not** add GA4, ads or unapproved content.
