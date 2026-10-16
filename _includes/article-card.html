@@ -1,0 +1,6 @@
+<article class="journal-card">
+  <p class="journal-kicker"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%d %B %Y" }}</time>{% if include.post.categories.size > 0 %} <span aria-hidden="true">·</span> {{ include.post.categories | first | replace: "-", " " | capitalize }}{% endif %}</p>
+  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h3>
+  <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncatewords: 30 | escape }}</p>
+  <a class="journal-text-link" href="{{ include.post.url | relative_url }}" aria-label="Read {{ include.post.title | escape }}">Read article <span aria-hidden="true">→</span></a>
+</article>

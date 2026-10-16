@@ -1,0 +1,13 @@
+---
+layout: reading
+---
+<div class="container journal-wrap">
+  <a class="journal-back" href="/blog/">← All articles</a>
+  <header class="journal-heading"><p class="eyebrow">Studio journal / Category</p><h1>{{ page.title | escape }}</h1><p>{{ page.description | escape }}</p></header>
+  {% assign category_posts = site.categories[page.category_key] %}
+  {% if category_posts.size > 0 %}
+  <div class="journal-grid">{% for post in category_posts %}{% include article-card.html post=post %}{% endfor %}</div>
+  {% else %}
+  <div class="journal-empty"><p>No articles in this category yet. New posts will appear here after editorial review.</p><a href="/blog/">Browse the journal →</a></div>
+  {% endif %}
+</div>

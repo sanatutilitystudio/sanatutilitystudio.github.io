@@ -1,0 +1,15 @@
+- slug: inside-sus
+  label: Inside SUS
+  description: Development journals, releases and studio milestones.
+- slug: building-with-ai
+  label: Building with AI
+  description: Practical experiences and lessons from AI-assisted software development.
+- slug: tech-updates
+  label: Tech Updates
+  description: Sourced updates with clearly identified interpretation.
+- slug: tutorials
+  label: Tutorials & Experiments
+  description: How-to guides, demonstrations and experiments.
+- slug: ai-lab
+  label: AI Lab
+  description: Local AI, APRIL and exploratory interfaces.

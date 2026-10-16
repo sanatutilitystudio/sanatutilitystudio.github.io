@@ -1,0 +1,17 @@
+---
+layout: reading
+title: "Search articles"
+description: "Search Sanat Utility Studio articles by title, category and summary."
+---
+<div class="container journal-wrap">
+  <a class="journal-back" href="/blog/">← All articles</a>
+  <header class="journal-heading"><p class="eyebrow">Studio journal</p><h1>Search articles.</h1><p>Find project journals, tutorials, AI experiments and technology updates.</p></header>
+  <form class="journal-search-form" role="search" onsubmit="return false;">
+    <label for="article-query">Search the article archive</label>
+    <input id="article-query" type="search" placeholder="Try AI, Android, Jekyll..." autocomplete="off">
+  </form>
+  <p class="journal-search-count" id="search-count" role="status" aria-live="polite">Start typing to search published articles.</p>
+  <div id="search-results" class="journal-grid"></div>
+  <noscript><p>JavaScript is required for this lightweight client-side search. <a href="/blog/">Browse all articles instead.</a></p></noscript>
+</div>
+<script src="/journal-search.js" defer></script>

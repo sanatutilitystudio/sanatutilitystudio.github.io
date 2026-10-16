@@ -1,0 +1,30 @@
+---
+layout: reading
+---
+<article class="journal-article container">
+  <a class="journal-back" href="/blog/">← All articles</a>
+  <header class="journal-article-header">
+    <p class="eyebrow">Studio journal {% if page.categories.size > 0 %}· {{ page.categories | first | replace: "-", " " | capitalize }}{% endif %}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="journal-article-meta">By {{ page.author | default: "Sanat Debbarma" | escape }} · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %B %Y" }}</time></p>
+    {% if page.description %}<p class="journal-deck">{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="journal-prose">{{ content }}</div>
+  <footer class="journal-article-footer">
+    <p>Views and experiments are those of the author unless otherwise sourced.</p>
+    <a href="/blog/">← Back to the journal</a>
+  </footer>
+</article>
+{% assign primary_category = page.categories | first %}
+{% assign related_posts = site.categories[primary_category] %}
+{% assign shown = 0 %}
+{% if related_posts.size > 1 %}
+<section class="container journal-related" aria-labelledby="related-heading">
+  <h2 id="related-heading">Related articles</h2>
+  <div class="journal-grid">
+  {% for post in related_posts %}
+    {% if post.url != page.url and shown < 3 %}{% include article-card.html post=post %}{% assign shown = shown | plus: 1 %}{% endif %}
+  {% endfor %}
+  </div>
+</section>
+{% endif %}

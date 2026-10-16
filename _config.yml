@@ -1,0 +1,31 @@
+title: "Sanat Utility Studio"
+description: "Apps, AI & Developer Insights from an independent software studio."
+url: "https://sanatutilitystudio.github.io"
+baseurl: ""
+timezone: "Asia/Kolkata"
+lang: "en"
+markdown: kramdown
+permalink: "/blog/:year/:month/:day/:title/"
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-feed
+paginate: 6
+paginate_path: "/blog/page/:num/"
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "Sanat Debbarma"
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - docs
+  - scripts
+  - vendor
+  - .bundle
+  - node_modules
+  - _site
