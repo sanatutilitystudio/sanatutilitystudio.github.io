@@ -15,18 +15,18 @@
 - [ ] Remove exaggeration, guaranteed-outcome wording, hype and unsupported claims.
 - [ ] Confirm the article title, SEO description, date and author attribution.
 
-## Historical assets — prepared locally, not in GitHub yet
+## Historical assets — uploaded to the development branch; privacy-checked
 
-Two authentic Wayback screenshots have been cropped and redacted, excluding the original historic phone number, email and sharing code. The redacted assets are in the separately prepared editorial review ZIP (not in the public repository).
+Two authentic Wayback screenshots have been cropped and redacted, excluding the original historic phone number, email and sharing code. The approved, redacted assets are now committed in the **public development branch** (not on the live website). The original unredacted files are not in the repository.
 
 | Planned repository location | Size | SHA256 |
 | --- | --- | --- |
 | `assets/sanatruma-2010-introduction.webp` | 600 × 1030 | `00b50c1369f02208feb9663168a7c39be639bc87b4c90132d97da703064ab6e8` |
 | `assets/sanatruma-2010-downloads.webp` | 600 × 1017 | `753e5df8f2891af30b214b632c1a2475bd2b02cff7132eec77890110a82332b7` |
 
-- [ ] Upload only these approved, redacted image files to the development branch.
-- [ ] Inspect the actual uploaded bytes and hashes to confirm no unredacted originals were substituted.
-- [ ] Verify the screenshots' alternate descriptions and captions.
+- [x] Upload only these approved, redacted image files to the development branch.
+- [x] Inspect the uploaded bytes and SHA-256 fingerprints to confirm no unredacted originals were substituted.
+- [x] Verify that screenshot paths, alternate descriptions and captions are present in the article source (rendering review still pending).
 - [ ] Render the draft using Jekyll `--drafts` and confirm **both images load**.
 - [ ] Review desktop and mobile presentation, heading structure and readability.
 - [ ] Rebuild with standard Jekyll settings and verify the draft is absent from the site, feed, sitemap and search.
