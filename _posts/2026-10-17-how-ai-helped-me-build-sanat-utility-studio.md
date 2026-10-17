@@ -12,11 +12,11 @@ permalink: /blog/how-ai-helped-me-build-sanat-utility-studio/
 
 *This article is a personal account, not a tutorial promising that a subscription fee or a few clever prompts will magically turn anyone into a software developer.*
 
-## Before the studio, there was a little website
+## Long before Sanat Utility Studio
 
 My professional life is in medicine. I studied MBBS, eventually trained in Internal Medicine, and work as a physician today. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
 
-### Before the websites, there were Nokia themes
+### Nokia themes and KD Player skins
 
 My early experiments with technology weren't limited to websites. During the days of Nokia feature phones, I used to create custom `.nth` themes and experiment with designing skins for **KD Player**, a Java-based music player. I enjoyed changing colours, backgrounds, icons and other interface details, sometimes spending hours trying to get everything looking just right.
 
@@ -32,6 +32,8 @@ And this was when phones had physical keypads, Bluetooth file transfers were pra
   </div>
   <figcaption>Representative illustrations of KD Player and Nokia .nth theme interfaces from the feature-phone era. They are not surviving screenshots of my original themes or player skins.</figcaption>
 </figure>
+
+### From mobile screens to the web
 
 That interest in customizing software eventually drew me toward building things on the web.
 
