@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate a generated SUS Jekyll site without external dependencies."""
 from html.parser import HTMLParser
+import hashlib
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import sys
@@ -18,6 +19,7 @@ required = [
     "blog/index.html", "blog/search/index.html", "search.json",
     "journal.css", "journal-search.js", "feed.xml",
     "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
+    "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
 ]
 required += [
     f"blog/categories/{category}/index.html" for category in [
@@ -31,6 +33,16 @@ if (site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html").exists
 for path in required:
     if not (site / path).is_file():
         errors.append(f"Missing required output: /{path}")
+# Guard against accidentally replacing redacted archive images with originals.
+approved_images = {
+    "assets/sanatruma-2010-introduction.webp": "00b50c1369f02208feb9663168a7c39be639bc87b4c90132d97da703064ab6e8",
+    "assets/sanatruma-2010-downloads.webp": "753e5df8f2891af30b214b632c1a2475bd2b02cff7132eec77890110a82332b7",
+}
+for path, expected_hash in approved_images.items():
+    if (site / path).is_file():
+        digest = hashlib.sha256((site / path).read_bytes()).hexdigest()
+        if digest != expected_hash:
+            errors.append(f"Archive image not approved/redacted version: {path}")
 expected_ads = "google.com, pub-6758691642754158, DIRECT, f08c47fec0942fa0"
 if (site / "app-ads.txt").exists():
     if (site / "app-ads.txt").read_text(encoding="utf-8").strip() != expected_ads:
