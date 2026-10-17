@@ -40,3 +40,17 @@ Do not introduce unapproved posts, GA4 identifiers, AdSense code, invasive track
 ## Validation
 
 `python3 scripts/validate_site.py _site` verifies critical legacy URLs, the app-ads publisher record, blog routes, generated sitemap, and internal links. The pull request build workflow runs these checks on a GitHub Pages-compatible Jekyll build.
+
+## First featured article — editorial hold
+
+The proposed article `_drafts/how-ai-helped-me-build-sanat-utility-studio.md` remains **unpublished**. Jekyll excludes `_drafts` from ordinary GitHub Pages builds, including the live blog, feed, search index and homepage. Review its first-person details, dates, examples and two redacted archive screenshots before release.
+
+To preview the draft locally without publishing it:
+
+```bash
+bundle exec jekyll serve --drafts
+```
+
+To publish **only after written editorial approval**, move the reviewed file to `_posts/2026-10-17-how-ai-helped-me-build-sanat-utility-studio.md`, update its publication date if needed, run the checks, and request a separate production approval. Never move a draft or merge the feature branch automatically.
+
+The screenshots shown in the draft were cropped from historical Wayback Machine images supplied by the developer. Historical phone and personal email details and a sharing code must remain redacted. Do not commit the unredacted originals to the public repository.

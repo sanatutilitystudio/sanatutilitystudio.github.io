@@ -1,4 +1,5 @@
-<article class="journal-card">
+<article class="journal-card{% if include.featured %} journal-card-featured{% endif %}">
+  {% if include.featured %}<p class="journal-featured-label">Featured story</p>{% endif %}
   <p class="journal-kicker"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%d %B %Y" }}</time>{% if include.post.categories.size > 0 %} <span aria-hidden="true">·</span> {{ include.post.categories | first | replace: "-", " " | capitalize }}{% endif %}</p>
   <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a></h3>
   <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncatewords: 30 | escape }}</p>

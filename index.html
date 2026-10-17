@@ -29,7 +29,15 @@
 </div></div></section>
 <section class="section journal-home" aria-labelledby="journal-home-title"><div class="container"><div class="journal-toolbar"><div><p class="eyebrow">Studio journal</p><h2 id="journal-home-title">Apps, AI &amp; Developer Insights.</h2></div><a href="/blog/">Explore the journal →</a></div>
 {% if site.posts.size > 0 %}
-<div class="journal-grid">{% for post in site.posts limit:3 %}{% include article-card.html post=post %}{% endfor %}</div>
+{% assign featured_articles = site.posts | where: "featured", true %}
+{% if featured_articles.size > 0 %}
+{% assign hero_post = featured_articles | first %}
+<div class="journal-featured-story">
+  <div class="journal-featured-visual" aria-hidden="true"><span class="journal-featured-kicker">From 2010 to today</span><strong>Curiosity, code,<br>and useful tools.</strong><span>Inside Sanat Utility Studio</span></div>
+  {% include article-card.html post=hero_post featured=true %}
+</div>
+{% endif %}
+<div class="journal-grid">{% for post in site.posts limit:3 %}{% if post.url != hero_post.url %}{% include article-card.html post=post %}{% endif %}{% endfor %}</div>
 {% else %}
 <p class="journal-home-intro">Development notes, practical tutorials and sourced technology updates are coming to the studio journal. Every article is reviewed before publication.</p>
 {% endif %}

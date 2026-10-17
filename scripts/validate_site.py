@@ -25,6 +25,9 @@ required += [
     ]
 ]
 errors = []
+# Draft-only editorial content must never appear in an ordinary production build.
+if (site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html").exists():
+    errors.append("Unapproved featured article was published in the default Jekyll build")
 for path in required:
     if not (site / path).is_file():
         errors.append(f"Missing required output: /{path}")
