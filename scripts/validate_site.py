@@ -20,6 +20,9 @@ required = [
     "journal.css", "journal-search.js", "feed.xml",
     "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
     "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
+    "assets/kd-player-playback-representative.webp",
+    "assets/kd-player-playlist-representative.webp",
+    "assets/nokia-nth-themes-representative.webp",
     "blog/how-ai-helped-me-build-sanat-utility-studio/index.html",
 ]
 required += [
@@ -97,17 +100,28 @@ for page in site.rglob("*.html"):
 article_page = site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html"
 if article_page.is_file():
     html = article_page.read_text(encoding="utf-8")
-    for term in ("How AI Helped Me Build Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
+    for term in ("From Nokia Themes to Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
         if term not in html:
             errors.append("Article content missing: " + term)
     for image in approved_images:
         if 'src="/' + image + '"' not in html:
             errors.append("Article image missing: " + image)
+    if "Nokia themes and KD Player skins" not in html:
+        errors.append("Missing feature-phone chapter")
+    for asset_name in (
+        "kd-player-playback-representative.webp",
+        "kd-player-playlist-representative.webp",
+        "nokia-nth-themes-representative.webp",
+    ):
+        if f'src="/assets/{asset_name}"' not in html:
+            errors.append("Article missing representative image " + asset_name)
+    if "They are not surviving screenshots of my original themes or player skins." not in html:
+        errors.append("Representative image attribution missing")
     if "Editorial note: This story" in html:
         errors.append("Internal editorial note present in published article")
 if (site / "index.html").is_file():
     home = (site / "index.html").read_text(encoding="utf-8")
-    if "journal-featured-story" not in home or "How AI Helped Me Build Sanat Utility Studio" not in home:
+    if "journal-featured-story" not in home or "From Nokia Themes to Sanat Utility Studio" not in home:
         errors.append("Featured article not visible on homepage")
 if errors:
     print("FAILED - site validation:")

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How AI Helped Me Build Sanat Utility Studio"
+title: "From Nokia Themes to Sanat Utility Studio"
 date: 2026-10-17 10:46:00 +0530
-description: "From small mobile websites during medical school to independent Android and Windows tools: how curiosity, AI assistance and careful testing shaped Sanat Utility Studio."
+description: "A personal journey through early mobile customization, websites, medicine, independent software development and the arrival of AI-assisted tools."
 categories: [inside-sus]
 tags: [independent-development, ai-assisted-development, early-web]
 author: "Sanat Debbarma"
@@ -12,9 +12,30 @@ permalink: /blog/how-ai-helped-me-build-sanat-utility-studio/
 
 *This article is a personal account, not a tutorial promising that a subscription fee or a few clever prompts will magically turn anyone into a software developer.*
 
-## Before the studio, there was a little website
+## Long before Sanat Utility Studio
 
-My professional life is in medicine. I studied MBBS, eventually trained in Internal Medicine, and work as a physician today. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
+My professional life is in medicine. After completing MBBS, I earned my MD in General Medicine and now practise as an Internal Medicine physician. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
+
+### Nokia themes and KD Player skins
+
+My early experiments with technology weren't limited to websites. During the days of Nokia feature phones, I used to create custom `.nth` themes and experiment with designing skins for **KD Player**, a Java-based music player. I enjoyed changing colours, backgrounds, icons and other interface details, sometimes spending hours trying to get everything looking just right.
+
+There was something satisfying about giving familiar software a different appearance. Even small changes could make the same phone or music player feel more personal. Looking back, I can still appreciate how much fun it was to experiment with those tiny screens.
+
+And this was when phones had physical keypads, Bluetooth file transfers were practically a social activity, and a good-looking music-player skin was worth showing your friends.
+
+<figure class="journal-archive-gallery journal-retro-gallery" aria-label="Representative examples of early KD Player and Nokia feature-phone interfaces">
+  <div class="journal-retro-grid">
+    <img src="/assets/kd-player-playback-representative.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Illustrative orange KD Player playback interface from the Java mobile-phone era.">
+    <img src="/assets/kd-player-playlist-representative.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Illustrative orange KD Player music playlist from the Java mobile-phone era.">
+    <img src="/assets/nokia-nth-themes-representative.webp" width="1086" height="1448" loading="lazy" decoding="async" alt="Illustrative Nokia theme selection screen with .nth theme files.">
+  </div>
+  <figcaption>Representative illustrations of KD Player and Nokia .nth theme interfaces from the feature-phone era. They are not surviving screenshots of my original themes or player skins.</figcaption>
+</figure>
+
+### From mobile screens to the web
+
+That interest in customizing software eventually drew me toward building things on the web.
 
 In the late 2000s, I was fascinated by the web: how pages were built, how links worked, and how someone could put something online without actually owning a server. I experimented with HTML, tried teaching myself some Java and Python, and published simple pages through free hosting services tailored to the feature phones of the era.
 
