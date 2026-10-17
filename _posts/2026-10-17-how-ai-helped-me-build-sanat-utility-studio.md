@@ -14,7 +14,7 @@ permalink: /blog/how-ai-helped-me-build-sanat-utility-studio/
 
 ## Long before Sanat Utility Studio
 
-My professional life is in medicine. I studied MBBS, eventually trained in Internal Medicine, and work as a physician today. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
+My professional life is in medicine. After completing MBBS, I earned my MD in General Medicine and now practise as an Internal Medicine physician. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
 
 ### Nokia themes and KD Player skins
 
