@@ -92,6 +92,3 @@ That is the simplest way I can describe this journey so far.
 
 If you are curious about the software itself, you can [explore the studio's applications](/#products). If you would rather follow the messy, human work behind them, the [studio journal](/blog/) is where I will be keeping my notes.
 
----
-
-*Editorial note: This story is a draft based on the developer's recollections and supplied archive screenshots. Project examples describe development concerns, not independent endorsements or guarantees of performance. Historical images are cropped and redacted.*
