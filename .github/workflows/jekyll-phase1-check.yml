@@ -3,7 +3,8 @@ on:
   pull_request:
   push:
     branches:
-      - feature/jekyll-phase1-20261017
+      - main
+      - "feature/**"
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build with GitHub Pages Jekyll
+      - name: Build GitHub Pages Jekyll site
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-      - name: Validate generated website
+      - name: Validate generated site and published article
         run: python3 scripts/validate_site.py _site

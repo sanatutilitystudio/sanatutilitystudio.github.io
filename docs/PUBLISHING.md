@@ -40,3 +40,7 @@ Do not introduce unapproved posts, GA4 identifiers, AdSense code, invasive track
 ## Validation
 
 `python3 scripts/validate_site.py _site` verifies critical legacy URLs, the app-ads publisher record, blog routes, generated sitemap, and internal links. The pull request build workflow runs these checks on a GitHub Pages-compatible Jekyll build.
+
+## First article published
+
+The October 2026 introductory article lives in _posts. Future content must undergo human review before publication. Archive images are redacted. Do not expose the original contact details or access code. The website requires Jekyll processing; do not browse source index.html directly.

@@ -11,13 +11,14 @@
   <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/journal.css' | relative_url }}">
+  {% if page.include_developer_css %}<link rel="stylesheet" href="{{ '/about-developer.css' | relative_url }}">{% endif %}
   <link rel="alternate" type="application/atom+xml" title="Sanat Utility Studio articles" href="{{ '/feed.xml' | relative_url }}">
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="Sanat Utility Studio">
   <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
   <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{{ '/assets/studio-social.jpg' | absolute_url }}">
+  <meta property="og:image" content="{{ page.social_image | default: '/assets/studio-social.jpg' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
   {% if page.layout == 'post' %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
@@ -32,7 +33,7 @@
       <a class="brand" href="/" aria-label="Sanat Utility Studio home"><img class="brand-mark" src="/assets/studio-icon.png" alt="" width="36" height="36"><span>Sanat Utility Studio</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="/#products">Apps</a><a href="/blog/">Journal</a><a href="/blog/search/">Search</a><a href="/#about">About</a>
+        <a href="/#products">Apps</a><a href="/blog/">Journal</a><a href="/blog/search/">Search</a><a href="/about-developer/">Developer</a>
         <a class="button button-small" href="/">Studio home</a>
       </nav>
     </div>

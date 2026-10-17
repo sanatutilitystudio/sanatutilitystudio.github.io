@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate a generated SUS Jekyll site without external dependencies."""
 from html.parser import HTMLParser
+import hashlib
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 import sys
@@ -17,6 +18,9 @@ required = [
     "tripura-paycalc/data-deletion/index.html",
     "blog/index.html", "blog/search/index.html", "search.json",
     "journal.css", "journal-search.js", "feed.xml",
+    "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
+    "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
+    "blog/how-ai-helped-me-build-sanat-utility-studio/index.html",
 ]
 required += [
     f"blog/categories/{category}/index.html" for category in [
@@ -27,6 +31,16 @@ errors = []
 for path in required:
     if not (site / path).is_file():
         errors.append(f"Missing required output: /{path}")
+# Guard against accidentally replacing redacted archive images with originals.
+approved_images = {
+    "assets/sanatruma-2010-introduction.webp": "00b50c1369f02208feb9663168a7c39be639bc87b4c90132d97da703064ab6e8",
+    "assets/sanatruma-2010-downloads.webp": "753e5df8f2891af30b214b632c1a2475bd2b02cff7132eec77890110a82332b7",
+}
+for path, expected_hash in approved_images.items():
+    if (site / path).is_file():
+        digest = hashlib.sha256((site / path).read_bytes()).hexdigest()
+        if digest != expected_hash:
+            errors.append(f"Archive image not approved/redacted version: {path}")
 expected_ads = "google.com, pub-6758691642754158, DIRECT, f08c47fec0942fa0"
 if (site / "app-ads.txt").exists():
     if (site / "app-ads.txt").read_text(encoding="utf-8").strip() != expected_ads:
@@ -41,7 +55,9 @@ if (site / "sitemap.xml").exists():
             "https://sanatutilitystudio.github.io/",
             "https://sanatutilitystudio.github.io/kcallog.html",
             "https://sanatutilitystudio.github.io/tripura-paycalc/privacy-policy/",
-            "https://sanatutilitystudio.github.io/blog/"
+            "https://sanatutilitystudio.github.io/blog/",
+            "https://sanatutilitystudio.github.io/about-developer/",
+            "https://sanatutilitystudio.github.io/blog/how-ai-helped-me-build-sanat-utility-studio/"
         ]:
             if url not in urls:
                 errors.append("Sitemap missing important URL: " + url)
@@ -78,6 +94,21 @@ for page in site.rglob("*.html"):
             target = target / "index.html"
         if not target.exists():
             errors.append(f"Broken local link in {page.relative_to(site)}: {ref}")
+article_page = site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html"
+if article_page.is_file():
+    html = article_page.read_text(encoding="utf-8")
+    for term in ("How AI Helped Me Build Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
+        if term not in html:
+            errors.append("Article content missing: " + term)
+    for image in approved_images:
+        if 'src="/' + image + '"' not in html:
+            errors.append("Article image missing: " + image)
+    if "Editorial note: This story" in html:
+        errors.append("Internal editorial note present in published article")
+if (site / "index.html").is_file():
+    home = (site / "index.html").read_text(encoding="utf-8")
+    if "journal-featured-story" not in home or "How AI Helped Me Build Sanat Utility Studio" not in home:
+        errors.append("Featured article not visible on homepage")
 if errors:
     print("FAILED - site validation:")
     for error in errors:
