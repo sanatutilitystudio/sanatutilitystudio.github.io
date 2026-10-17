@@ -100,7 +100,7 @@ for page in site.rglob("*.html"):
 article_page = site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html"
 if article_page.is_file():
     html = article_page.read_text(encoding="utf-8")
-    for term in ("How AI Helped Me Build Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
+    for term in ("From Nokia Themes to Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
         if term not in html:
             errors.append("Article content missing: " + term)
     for image in approved_images:
@@ -121,7 +121,7 @@ if article_page.is_file():
         errors.append("Internal editorial note present in published article")
 if (site / "index.html").is_file():
     home = (site / "index.html").read_text(encoding="utf-8")
-    if "journal-featured-story" not in home or "How AI Helped Me Build Sanat Utility Studio" not in home:
+    if "journal-featured-story" not in home or "From Nokia Themes to Sanat Utility Studio" not in home:
         errors.append("Featured article not visible on homepage")
 if errors:
     print("FAILED - site validation:")
