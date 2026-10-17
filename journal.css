@@ -66,3 +66,4 @@
 .journal-home .journal-card > p:not(.journal-kicker),
 .journal-home .journal-card .journal-kicker { color: var(--muted); }
 .journal-home .journal-toolbar > a { color: #315fae; }
+.journal-home .journal-home-intro { color: var(--muted-dark); max-width: 760px; margin: 0 0 1.8rem; line-height: 1.7; font-size: 1rem; }
