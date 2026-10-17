@@ -127,3 +127,27 @@ body[class*="product-"] .contact-email{
 .sus-consent-actions button:focus-visible,#sus-analytics-preferences:focus-visible{outline:3px solid #a9c8ff;outline-offset:3px}
 #sus-analytics-preferences{font:inherit;font-weight:700;cursor:pointer;padding:.65rem 1rem;border:1px solid #7b8799;border-radius:7px;background:#171e28;color:#f6f5f1}
 @media(max-width:600px){.sus-consent{flex-direction:column;align-items:stretch;gap:.9rem;bottom:.5rem;left:.5rem;right:.5rem;width:calc(100% - 1rem);padding:1rem}.sus-consent-actions{display:grid;grid-template-columns:1fr 1fr}.sus-consent-actions button{min-height:44px}}
+
+/* Navigation overflow protection on tablets and small laptops. */
+@media (min-width:721px) and (max-width:900px) {
+  .nav-toggle {display:inline-flex}
+  .site-nav {position:absolute;top:70px;left:.75rem;right:.75rem;display:none;flex-direction:column;align-items:stretch;padding:1rem;border:1px solid var(--line);background:#0b0f16}
+  .site-nav.open {display:flex}
+}
+/* Homepage discovery panel: four distinct routes, no stale counters. */
+.studio-hero h1{font-size:clamp(2.6rem,5.3vw,5.1rem);max-width:780px}
+.studio-hero-grid{grid-template-columns:minmax(0,1.22fr) minmax(330px,.78fr);gap:clamp(2.5rem,5vw,5.5rem);align-items:center}
+.studio-index-title{margin-bottom:.75rem}
+.studio-explore-links{display:block}
+.studio-explore-row{display:grid;grid-template-columns:42px minmax(0,1fr) 18px;gap:.85rem;align-items:center;padding:1.1rem .25rem;border-top:1px solid var(--line);text-decoration:none;color:inherit;transition:background .15s ease,padding .15s ease}
+.studio-explore-row:hover{background:rgba(159,187,245,.065);padding-left:.55rem}
+.studio-explore-row:focus-visible{outline:2px solid #a0bcff;outline-offset:3px;border-radius:4px}
+.studio-explore-mark{font-size:.7rem;line-height:1.2;color:#9bbaff;font-weight:750;letter-spacing:.06em}
+.studio-explore-copy{display:flex;flex-direction:column;gap:.25rem}
+.studio-explore-copy strong{color:#f5f4f0;font-size:.98rem;line-height:1.3}
+.studio-explore-copy>span{color:#aeb8cb;font-size:.84rem;line-height:1.5}
+.studio-explore-arrow{color:#9bbaff;font-size:1.15rem;transition:transform .15s ease}
+.studio-explore-row:hover .studio-explore-arrow{transform:translateX(3px)}
+@media(max-width:1000px){.studio-hero-grid{grid-template-columns:1fr;gap:3rem}.studio-hero h1{font-size:clamp(2.7rem,8vw,5rem)}.studio-index{max-width:650px}}
+@media(max-width:550px){.studio-hero h1{font-size:clamp(2.5rem,9.7vw,3.5rem)}.studio-explore-row{grid-template-columns:37px minmax(0,1fr) 16px;padding:1rem .1rem}.studio-explore-copy strong{font-size:.96rem}}
+@media(prefers-reduced-motion:reduce){.studio-explore-row,.studio-explore-arrow{transition:none}}

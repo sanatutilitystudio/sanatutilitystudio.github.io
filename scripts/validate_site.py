@@ -137,6 +137,73 @@ for page_name in ("index.html", "kcallog.html", "blog/index.html", "about-develo
     if (site / page_name).is_file() and 'href="/privacy/"' not in (site / page_name).read_text(encoding="utf-8"):
         errors.append("Privacy link missing from " + page_name)
 
+
+# All rendered pages share one navigation structure; SRDA stays in the product
+# catalogue but is no longer a top-level navigation item.
+expected_nav = [
+    ("/#products", "Products"),
+    ("/blog/", "Journal"),
+    ("/about-developer/", "About"),
+    ("/#contact", "Contact"),
+    ("https://play.google.com/store/apps/dev?id=5307424891002541633", "Google Play"),
+]
+for page in site.rglob("*.html"):
+    html = page.read_text(encoding="utf-8")
+    # Tripura PayCalc legal documents intentionally retain their app-specific links.
+    if page.relative_to(site).parts[:2] == ("tripura-paycalc", "privacy-policy") or page.relative_to(site).parts[:2] == ("tripura-paycalc", "terms") or page.relative_to(site).parts[:2] == ("tripura-paycalc", "data-deletion"):
+        continue
+    if 'id="site-nav"' not in html:
+        continue
+    from html.parser import HTMLParser as _Parser
+    class _NavParser(_Parser):
+        def __init__(self):
+            super().__init__()
+            self.in_nav = False
+            self.in_a = False
+            self.current = None
+            self.links = []
+        def handle_starttag(self, tag, attrs):
+            a = dict(attrs)
+            if tag == "nav" and a.get("id") == "site-nav":
+                self.in_nav = True
+            elif self.in_nav and tag == "a":
+                self.current = [a.get("href"), ""]
+                self.in_a = True
+        def handle_data(self, data):
+            if self.in_nav and self.in_a:
+                self.current[1] += data
+        def handle_endtag(self, tag):
+            if tag == "a" and self.in_nav and self.in_a:
+                self.links.append(tuple(x.strip() if x else x for x in self.current))
+                self.in_a = False
+            elif tag == "nav" and self.in_nav:
+                self.in_nav = False
+    nav = _NavParser()
+    nav.feed(html)
+    if nav.links != expected_nav:
+        errors.append(f"Navigation differs in {page.relative_to(site)}: {nav.links}")
+
+# Homepage has a balanced studio/software/journal/AI-lab introduction.
+homepage = site / "index.html"
+if homepage.is_file():
+    homepage_html = homepage.read_text(encoding="utf-8")
+    for fragment in (
+        "Building useful software.",
+        "Exploring technology.",
+        "Development Stories &amp; Technology Insights.",
+        "Stories from building independent software, practical tutorials",
+        "with each application designed around a specific practical need.",
+        "Apps &amp; Tools",
+        "Studio Journal",
+        "Experiments &amp; AI Lab",
+        "About the Developer",
+    ):
+        if fragment not in homepage_html:
+            errors.append("Homepage editorial/navigation element missing: " + fragment)
+    for url in ("/#products", "/blog/", "/blog/categories/ai-lab/", "/about-developer/"):
+        if f'class="studio-explore-row" href="{url}"' not in homepage_html:
+            errors.append("Homepage discovery link missing: " + url)
+
 if errors:
     print("FAILED - site validation:")
     for error in errors:
