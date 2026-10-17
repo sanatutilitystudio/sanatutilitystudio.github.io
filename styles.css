@@ -158,20 +158,39 @@ body[class*="product-"] .contact-email{
 .product-srda .product-visual img{width:100%;height:auto;border-radius:6px}
 .product-srda .desktop-showcase figcaption{padding:.55rem .75rem;color:#4b5362;font-size:.85rem}
 
-/* Sanat Relay plain-language product explanation */
-.srda-intro-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,5rem)}
-.srda-intro-grid h2{max-width:560px}
-.srda-prose{max-width:670px;color:#454c57;font-size:1.02rem}
-.srda-prose p+p{margin-top:1.3rem}
-.srda-prose strong{color:#181e28}
-.srda-how{background:#e8e5dc}
-.srda-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
-.srda-step{border-top:1px solid rgba(18,21,27,.25);padding:1.2rem .65rem 0 0}
-.srda-step-no{display:block;font-family:"Sora",sans-serif;color:#315fae;font-weight:700;font-size:.78rem;letter-spacing:.1em;margin-bottom:1rem}
-.srda-step h3{font-size:1.12rem;line-height:1.3}
-.srda-step p{font-size:.93rem;color:#535a66}
-.srda-example{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;border-top:1px solid rgba(18,21,27,.22);margin-top:3.2rem;padding-top:2.1rem}
-.srda-example h3{font-size:clamp(1.4rem,2.8vw,2rem)}
-.srda-example p{color:#454c57}
-@media(max-width:920px){.srda-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.srda-intro-grid{grid-template-columns:1fr;gap:1.6rem}}
-@media(max-width:600px){.srda-steps,.srda-example{grid-template-columns:1fr}.srda-example{gap:.5rem}}
+/* SRDA-specific detail styling. Main sections inherit the common dark
+   Windows product template and its contrast-safe text colours. */
+.product-srda .product-title-row h1{font-size:clamp(2.7rem,5.4vw,4.7rem)}
+.product-srda .srda-disclaimer{
+  max-width:890px;
+  margin:2.2rem 0 0;
+  padding:1rem 1.2rem;
+  border-left:3px solid var(--product);
+  background:#121b29;
+  color:#c5cedf;
+  font-size:.91rem;
+  line-height:1.75;
+}
+.product-srda .desktop-showcase figcaption{
+  display:block;
+  color:#e5e9f1;
+  background:#111b2a;
+  padding:.65rem .8rem;
+}
+
+/* SRDA responsive intrinsic-width protection for screenshots and hero copy. */
+@media(max-width:980px){
+  body.product-srda .product-hero-grid,
+  body.product-srda .section-heading,
+  body.product-srda .availability-card{grid-template-columns:minmax(0,1fr)}
+  body.product-srda .product-hero-grid>*,
+  body.product-srda .product-title-row>*,
+  body.product-srda .product-visual,
+  body.product-srda .product-visual img{min-width:0;max-width:100%}
+  body.product-srda .product-visual img{height:auto;object-fit:contain}
+}
+@media(max-width:480px){
+  body.product-srda .product-title-row{gap:.8rem}
+  body.product-srda .product-icon-xl{width:58px;height:58px;flex:0 0 58px}
+  body.product-srda .product-title-row h1{font-size:clamp(2rem,9vw,2.55rem)}
+}
