@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "How AI Helped Me Build Sanat Utility Studio"
+title: "From Nokia Themes to Sanat Utility Studio"
 date: 2026-10-17 10:46:00 +0530
-description: "From small mobile websites during medical school to independent Android and Windows tools: how curiosity, AI assistance and careful testing shaped Sanat Utility Studio."
+description: "A personal journey through early mobile customization, websites, medicine, independent software development and the arrival of AI-assisted tools."
 categories: [inside-sus]
 tags: [independent-development, ai-assisted-development, early-web]
 author: "Sanat Debbarma"
