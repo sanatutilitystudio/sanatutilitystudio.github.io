@@ -19,6 +19,7 @@
   <meta property="og:description" content="{{ page.description | default: site.description | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <meta property="og:image" content="{{ page.social_image | default: '/assets/studio-social.jpg' | absolute_url }}">
+  {% if page.social_image_alt %}<meta property="og:image:alt" content="{{ page.social_image_alt | escape }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
   {% if page.layout == 'post' %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
