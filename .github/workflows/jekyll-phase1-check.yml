@@ -3,8 +3,8 @@ on:
   pull_request:
   push:
     branches:
-      - main
-      - "feature/**"
+      - feature/jekyll-phase1-20261017
+      - feature/phase2-content
   workflow_dispatch:
 permissions:
   contents: read
@@ -13,10 +13,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build GitHub Pages Jekyll site
+      - name: Build production-equivalent Jekyll site (no drafts)
         uses: actions/jekyll-build-pages@v1
         with:
           source: ./
           destination: ./_site
-      - name: Validate generated site and published article
+      - name: Validate production-equivalent site and draft isolation
         run: python3 scripts/validate_site.py _site
+
+  build-editorial-draft-preview:
+    if: github.head_ref == 'feature/phase2-content' || github.ref_name == 'feature/phase2-content'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare ephemeral editorial preview without changing Git
+        run: |
+          mkdir -p _posts
+          cp _drafts/how-ai-helped-me-build-sanat-utility-studio.md _posts/2026-10-17-how-ai-helped-me-build-sanat-utility-studio.md
+      - name: Build preview using GitHub Pages Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_draft_site
+      - name: Validate article, featured card and redacted screenshots
+        run: python3 scripts/validate_draft_preview.py _draft_site
+      - name: Save preview artifact for manual review (not deployed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: sus-editorial-preview
+          path: _draft_site/
+          if-no-files-found: error
+          retention-days: 7
