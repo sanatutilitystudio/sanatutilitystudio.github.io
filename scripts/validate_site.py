@@ -18,7 +18,7 @@ required = [
     "tripura-paycalc/data-deletion/index.html",
     "blog/index.html", "blog/search/index.html", "search.json",
     "journal.css", "journal-search.js", "feed.xml",
-    "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
+    "about-developer/index.html", "about-developer.css", "privacy/index.html", "assets/developer-portrait.webp",
     "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
     "assets/kd-player-playback-representative.webp",
     "assets/kd-player-playlist-representative.webp",
@@ -123,6 +123,20 @@ if (site / "index.html").is_file():
     home = (site / "index.html").read_text(encoding="utf-8")
     if "journal-featured-story" not in home or "From Nokia Themes to Sanat Utility Studio" not in home:
         errors.append("Featured article not visible on homepage")
+
+if (site / "privacy/index.html").is_file():
+    privacy = (site / "privacy/index.html").read_text(encoding="utf-8")
+    if "sus-analytics-preferences" not in privacy:
+        errors.append("Missing analytics preference control in privacy page")
+if (site / "script.js").is_file():
+    consent_script = (site / "script.js").read_text(encoding="utf-8")
+    for part in ("G-C8R92WS0QH", "sus-analytics-choice-v1", 'consent !== "accepted"', "app_download_click"):
+        if part not in consent_script:
+            errors.append("Analytics consent script missing " + part)
+for page_name in ("index.html", "kcallog.html", "blog/index.html", "about-developer/index.html"):
+    if (site / page_name).is_file() and 'href="/privacy/"' not in (site / page_name).read_text(encoding="utf-8"):
+        errors.append("Privacy link missing from " + page_name)
+
 if errors:
     print("FAILED - site validation:")
     for error in errors:
