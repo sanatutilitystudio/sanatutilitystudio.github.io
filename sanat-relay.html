@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#070b14">
   <meta name="color-scheme" content="dark">
-  <meta name="description" content="Sanat Relay Desktop Agent is a Windows tool for approved project access, source inspection, controlled edits, builds, diagnostics and Git workflows. By request.">
+  <meta name="description" content="What is Sanat Relay Desktop Agent? A Windows MCP companion connecting AI assistants to approved development projects, code, build tools, diagnostics and Git workflows.">
   <title>Sanat Relay Desktop Agent &mdash; Sanat Utility Studio</title>
   <link rel="canonical" href="https://sanatutilitystudio.github.io/sanat-relay.html">
   <link rel="icon" href="assets/favicon.png">
@@ -34,7 +34,7 @@
         <img class="product-icon-xl" src="assets/srda.webp" alt="Sanat Relay app icon">
         <div><p class="eyebrow">Windows &middot; By request</p><h1>Sanat Relay Desktop Agent</h1></div>
       </div>
-      <p class="product-lede">A Windows development companion for working with approved project folders, source files, build jobs and Git operations through AI-assisted workflows.</p>
+      <p class="product-lede">Sanat Relay lets an AI assistant work with the development projects you approve on your Windows computer. Instead of repeatedly copying source files and error logs into a chat, you can connect selected project files and development tools through a permission-controlled bridge.</p>
       <div class="product-actions">
         <a class="button" href="mailto:sanatutilitystudio@gmail.com?subject=Sanat%20Relay%20Product%20Enquiry">Product enquiry</a>
         <a class="button button-secondary" href="mailto:sanatutilitystudio@gmail.com?subject=Sanat%20Relay%20Pricing%20and%20Licensing">Pricing &amp; licensing</a>
@@ -43,16 +43,41 @@
     <div class="product-visual"><img src="assets/srda-connection.webp" width="1600" height="900" alt="Sanat Relay standalone connection test window on Windows" decoding="async"></div>
   </div>
 </section>
+<section class="section srda-introduction" aria-labelledby="srda-what-heading">
+  <div class="container srda-intro-grid">
+    <div><p class="eyebrow">What is Sanat Relay?</p><h2 id="srda-what-heading">An AI assistant that can work with your development projects.</h2></div>
+    <div class="srda-prose">
+      <p><strong>Sanat Relay Desktop Agent (SRDA)</strong> is a Windows companion application being developed by Sanat Utility Studio. It provides a controlled connection between an AI assistant, such as ChatGPT, and tools available on a developer's own computer.</p>
+      <p>It uses the <strong>Model Context Protocol (MCP)</strong>, which lets an AI assistant request specific tool actions. With an authorized connection, it can inspect approved project files, investigate errors, run supported builds and tests, or review Git changes without manually copying each file and log into a chat.</p>
+      <p><strong>It is not a general-purpose remote desktop.</strong> The computer owner chooses accessible project folders and tool permissions. A healthy local tunnel test does not by itself establish a verified ChatGPT connection or unrestricted access to the computer.</p>
+    </div>
+  </div>
+</section>
 <section class="section">
   <div class="container">
-    <div class="section-heading"><div><p class="eyebrow">What it does</p><h2>Development workflows with deliberate access.</h2></div><p>Sanat Relay connects approved development projects to structured actions. Local connectivity, ChatGPT-side access and sensitive operations are separate steps.</p></div>
+    <div class="section-heading"><div><p class="eyebrow">What it can do</p><h2>From reading code to checking the build.</h2></div><p>Available functions depend on the approved workspace, the connected tools and the permissions granted by the computer owner.</p></div>
     <div class="feature-grid">
-      <article class="feature-card"><strong>Approved project folders</strong><p>Choose which project directories may be exposed to the development agent.</p></article>
-      <article class="feature-card"><strong>Source inspection</strong><p>Read and search supported files in authorized project workspaces.</p></article>
-      <article class="feature-card"><strong>Controlled editing</strong><p>Use permissioned edits and backup-aware workflows where enabled.</p></article>
-      <article class="feature-card"><strong>Builds and diagnostics</strong><p>Run supported development checks and inspect job output under approved permissions.</p></article>
-      <article class="feature-card"><strong>Git workflows</strong><p>Inspect changes and explicitly authorize scoped commits or pushes.</p></article>
-      <article class="feature-card"><strong>Permission management</strong><p>Manage access to project operations separately from basic connection status.</p></article>
+      <article class="feature-card"><strong>Select project folders</strong><p>Choose the application or website directories the assistant is allowed to access, rather than exposing unrelated files.</p></article>
+      <article class="feature-card"><strong>Inspect source code</strong><p>Locate relevant files, review code and investigate errors in authorized workspaces.</p></article>
+      <article class="feature-card"><strong>Make controlled changes</strong><p>Apply authorized source edits with revision checks and recoverable backups where supported.</p></article>
+      <article class="feature-card"><strong>Run builds and tests</strong><p>Execute supported project checks, analyze failures and review logs and exit status.</p></article>
+      <article class="feature-card"><strong>Review Git changes</strong><p>Check repository status and diffs; commits and pushes require the relevant permissions.</p></article>
+      <article class="feature-card"><strong>Manage tool access</strong><p>Enable only the required project tools and permissions. Local connectivity alone does not authorize sensitive actions.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section srda-how" aria-labelledby="srda-how-heading">
+  <div class="container">
+    <div class="section-heading"><div><p class="eyebrow">How it works</p><h2 id="srda-how-heading">Four steps from connection to useful work.</h2></div><p>Sanat Relay runs locally on Windows. The AI assistant can use supported development tools only through the configured connection and the permissions you provide.</p></div>
+    <div class="srda-steps">
+      <article class="srda-step"><span class="srda-step-no">01</span><h3>Start Sanat Relay</h3><p>Open the Windows application and check its local connection status.</p></article>
+      <article class="srda-step"><span class="srda-step-no">02</span><h3>Choose what to share</h3><p>Approve project folders and the tools needed for the current task.</p></article>
+      <article class="srda-step"><span class="srda-step-no">03</span><h3>Connect the assistant</h3><p>Configure and verify the supported MCP connection. A green local tunnel alone is not proof of an active ChatGPT connection.</p></article>
+      <article class="srda-step"><span class="srda-step-no">04</span><h3>Request and review</h3><p>Ask for a development task, examine the results and approve sensitive operations when required.</p></article>
+    </div>
+    <div class="srda-example">
+      <div><p class="eyebrow">Example workflow</p><h3>Fixing a failed website build</h3></div>
+      <div><p>Suppose a Jekyll website fails to build. With its project folder approved and suitable tools enabled, the assistant could inspect the configuration, identify an error in the build output, suggest an adjustment and rerun validation.</p><p>This is an illustrative use case, not a claim that the tool can repair every project automatically. The developer remains responsible for reviewing changes.</p></div>
     </div>
   </div>
 </section>
@@ -66,10 +91,16 @@
     </div>
   </div>
 </section>
+<section class="section srda-audience" aria-labelledby="srda-audience-heading">
+  <div class="container srda-intro-grid">
+    <div><p class="eyebrow">Who it is for</p><h2 id="srda-audience-heading">Independent developers and hands-on projects.</h2></div>
+    <div class="srda-prose"><p>Sanat Relay is designed for developers maintaining personal applications and websites, experimenting with local AI tools or handling repeat development tasks on Windows.</p><p>It aims to reduce repetitive copying between chat windows and development tools while keeping workspace boundaries and the owner's decisions visible.</p></div>
+  </div>
+</section>
 <section id="availability" class="section">
   <div class="container availability-card">
     <div><p class="eyebrow">Availability</p><h2>Available by request.</h2>
-      <p>Sanat Relay is under active private development. Contact the studio for its current access requirements, development status and licensing information.</p>
+      <p>Sanat Relay is an evolving private Windows development project, not a self-service public download. Contact the studio for current build availability, setup requirements and licensing information. Features and connection support may vary by configuration.</p>
       <p class="srda-note">Sanat Relay is an independent Sanat Utility Studio project, not an official OpenAI product. A healthy local tunnel test does not by itself confirm ChatGPT integration.</p>
     </div>
     <div class="availability-actions"><a class="button" href="mailto:sanatutilitystudio@gmail.com?subject=Sanat%20Relay%20Access%20Enquiry">Contact the studio</a></div>
