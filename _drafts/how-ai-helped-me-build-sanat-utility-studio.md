@@ -40,7 +40,7 @@ Over time, the tools evolved. Smartphones replaced the devices those old Java li
 
 What stayed constant was the core appeal: taking a practical problem and building a tool to solve it.
 
-Sanat Utility Studio grew from that exact premise. Today, the studio houses several kinds of projects: Android utilities, desktop tools for media workflows, and experiments with local AI. Not everything is equally mature—some projects are publicly released, while others are still in private testing or active development. Keeping those distinctions clear matters to me.
+Sanat Utility Studio grew from that exact premise. Today, the studio houses several kinds of projects: Android utilities, desktop tools for media workflows, and experiments with local AI. Not everything is equally mature. Some projects are publicly released, while others are still in private testing or active development. Keeping those distinctions clear matters to me.
 
 ## Where AI actually became useful
 
@@ -74,7 +74,7 @@ The decidedly unglamorous work matters just as much: checking package versions, 
 
 When an AI response is wrong, I still have to recognize the error. When an app behaves unexpectedly, I still have to investigate it.
 
-I've learned to treat AI as an unusually accessible, occasionally overconfident development assistant—not an authority that replaces verification.
+I've learned to treat AI as an unusually accessible, occasionally overconfident development assistant, not an authority that replaces verification.
 
 ## The distance between 2010 and today
 
@@ -82,7 +82,7 @@ My early site was largely about discovering and sharing existing software. Today
 
 That evolution didn't happen in a straight line, and I have no interest in manufacturing a neat, cinematic origin story. Medicine occupied much of the intervening time, but the pull of technology kept drawing me back.
 
-Now, the studio website features a journal alongside the app catalogue. I plan to use it to document real development decisions, explain experiments, share tutorials when I actually have something useful to teach, and discuss AI news with clear links to the original sources.
+Now, the studio website features a journal alongside the app catalogue. I plan to use it to document real development decisions, explain experiments, and share tutorials when I actually have something useful to teach. I also want to discuss useful developments in software, developer tools, AI and technology more broadly, with links to original sources when covering news.
 
 There will be successful launches, abandoned ideas, and mistakes well worth documenting. I would much rather make those visible than pretend every project is an effortless triumph.
 
