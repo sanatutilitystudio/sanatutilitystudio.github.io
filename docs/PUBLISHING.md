@@ -53,4 +53,4 @@ bundle exec jekyll serve --drafts
 
 To publish **only after written editorial approval**, move the reviewed file to `_posts/2026-10-17-how-ai-helped-me-build-sanat-utility-studio.md`, update its publication date if needed, run the checks, and request a separate production approval. Never move a draft or merge the feature branch automatically.
 
-The screenshots shown in the draft were cropped from historical Wayback Machine images supplied by the developer. Historical phone and personal email details and a sharing code must remain redacted. Do not commit the unredacted originals to the public repository.
+The two redacted historical screenshots have been prepared as a separate local asset package, but have NOT yet been committed to GitHub. **Release blocker:** before any draft preview or publication, upload `assets/sanatruma-2010-introduction.webp` and `assets/sanatruma-2010-downloads.webp` from the redacted asset package, then verify both images render. The unredacted screenshots contain historical phone, personal email, and a sharing code; never commit them to the public repository.
