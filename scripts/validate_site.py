@@ -149,6 +149,9 @@ expected_nav = [
 ]
 for page in site.rglob("*.html"):
     html = page.read_text(encoding="utf-8")
+    # Tripura PayCalc legal documents intentionally retain their app-specific links.
+    if page.relative_to(site).parts[:2] == ("tripura-paycalc", "privacy-policy") or page.relative_to(site).parts[:2] == ("tripura-paycalc", "terms") or page.relative_to(site).parts[:2] == ("tripura-paycalc", "data-deletion"):
+        continue
     if 'id="site-nav"' not in html:
         continue
     from html.parser import HTMLParser as _Parser
