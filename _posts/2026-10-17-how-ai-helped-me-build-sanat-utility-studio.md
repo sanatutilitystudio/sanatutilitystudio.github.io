@@ -16,6 +16,25 @@ permalink: /blog/how-ai-helped-me-build-sanat-utility-studio/
 
 My professional life is in medicine. I studied MBBS, eventually trained in Internal Medicine, and work as a physician today. But the curiosity that led me to Sanat Utility Studio began much earlier, during my medical-school years.
 
+### Before the websites, there were Nokia themes
+
+My early experiments with technology weren't limited to websites. During the days of Nokia feature phones, I used to create custom `.nth` themes and experiment with designing skins for **KD Player**, a Java-based music player. I enjoyed changing colours, backgrounds, icons and other interface details, sometimes spending hours trying to get everything looking just right.
+
+There was something satisfying about giving familiar software a different appearance. Even small changes could make the same phone or music player feel more personal. Looking back, I can still appreciate how much fun it was to experiment with those tiny screens.
+
+And this was when phones had physical keypads, Bluetooth file transfers were practically a social activity, and a good-looking music-player skin was worth showing your friends.
+
+<figure class="journal-archive-gallery journal-retro-gallery" aria-label="Representative examples of early KD Player and Nokia feature-phone interfaces">
+  <div class="journal-retro-grid">
+    <img src="/assets/kd-player-playback-representative.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Illustrative orange KD Player playback interface from the Java mobile-phone era.">
+    <img src="/assets/kd-player-playlist-representative.webp" width="1122" height="1402" loading="lazy" decoding="async" alt="Illustrative orange KD Player music playlist from the Java mobile-phone era.">
+    <img src="/assets/nokia-nth-themes-representative.webp" width="1086" height="1448" loading="lazy" decoding="async" alt="Illustrative Nokia theme selection screen with .nth theme files.">
+  </div>
+  <figcaption>Representative illustrations of KD Player and Nokia .nth theme interfaces from the feature-phone era. They are not surviving screenshots of my original themes or player skins.</figcaption>
+</figure>
+
+That interest in customizing software eventually drew me toward building things on the web.
+
 In the late 2000s, I was fascinated by the web: how pages were built, how links worked, and how someone could put something online without actually owning a server. I experimented with HTML, tried teaching myself some Java and Python, and published simple pages through free hosting services tailored to the feature phones of the era.
 
 One of those early experiments was **SanatRuma**, a mobile-oriented website. The [Internet Archive](https://web.archive.org/) preserved a snapshot dated **24 September 2010**, and looking back, it is a rather enthusiastic assortment of links to Java and Symbian applications, wallpapers, music, and computer utilities.

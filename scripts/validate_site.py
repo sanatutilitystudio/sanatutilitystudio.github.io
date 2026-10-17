@@ -20,6 +20,9 @@ required = [
     "journal.css", "journal-search.js", "feed.xml",
     "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
     "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
+    "assets/kd-player-playback-representative.webp",
+    "assets/kd-player-playlist-representative.webp",
+    "assets/nokia-nth-themes-representative.webp",
     "blog/how-ai-helped-me-build-sanat-utility-studio/index.html",
 ]
 required += [
@@ -103,6 +106,17 @@ if article_page.is_file():
     for image in approved_images:
         if 'src="/' + image + '"' not in html:
             errors.append("Article image missing: " + image)
+    if "Before the websites, there were Nokia themes" not in html:
+        errors.append("Missing feature-phone chapter")
+    for asset_name in (
+        "kd-player-playback-representative.webp",
+        "kd-player-playlist-representative.webp",
+        "nokia-nth-themes-representative.webp",
+    ):
+        if f'src="/assets/{asset_name}"' not in html:
+            errors.append("Article missing representative image " + asset_name)
+    if "They are not surviving screenshots of my original themes or player skins." not in html:
+        errors.append("Representative image attribution missing")
     if "Editorial note: This story" in html:
         errors.append("Internal editorial note present in published article")
 if (site / "index.html").is_file():
