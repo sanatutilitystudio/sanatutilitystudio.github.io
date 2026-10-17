@@ -20,6 +20,7 @@ required = [
     "journal.css", "journal-search.js", "feed.xml",
     "about-developer/index.html", "about-developer.css", "assets/developer-portrait.webp",
     "assets/sanatruma-2010-introduction.webp", "assets/sanatruma-2010-downloads.webp",
+    "blog/how-ai-helped-me-build-sanat-utility-studio/index.html",
 ]
 required += [
     f"blog/categories/{category}/index.html" for category in [
@@ -27,9 +28,6 @@ required += [
     ]
 ]
 errors = []
-# Draft-only editorial content must never appear in an ordinary production build.
-if (site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html").exists():
-    errors.append("Unapproved featured article was published in the default Jekyll build")
 for path in required:
     if not (site / path).is_file():
         errors.append(f"Missing required output: /{path}")
@@ -58,7 +56,8 @@ if (site / "sitemap.xml").exists():
             "https://sanatutilitystudio.github.io/kcallog.html",
             "https://sanatutilitystudio.github.io/tripura-paycalc/privacy-policy/",
             "https://sanatutilitystudio.github.io/blog/",
-            "https://sanatutilitystudio.github.io/about-developer/"
+            "https://sanatutilitystudio.github.io/about-developer/",
+            "https://sanatutilitystudio.github.io/blog/how-ai-helped-me-build-sanat-utility-studio/"
         ]:
             if url not in urls:
                 errors.append("Sitemap missing important URL: " + url)
@@ -95,6 +94,21 @@ for page in site.rglob("*.html"):
             target = target / "index.html"
         if not target.exists():
             errors.append(f"Broken local link in {page.relative_to(site)}: {ref}")
+article_page = site / "blog/how-ai-helped-me-build-sanat-utility-studio/index.html"
+if article_page.is_file():
+    html = article_page.read_text(encoding="utf-8")
+    for term in ("How AI Helped Me Build Sanat Utility Studio", "Where AI actually became useful", "occasionally overconfident development assistant"):
+        if term not in html:
+            errors.append("Article content missing: " + term)
+    for image in approved_images:
+        if 'src="/' + image + '"' not in html:
+            errors.append("Article image missing: " + image)
+    if "Editorial note: This story" in html:
+        errors.append("Internal editorial note present in published article")
+if (site / "index.html").is_file():
+    home = (site / "index.html").read_text(encoding="utf-8")
+    if "journal-featured-story" not in home or "How AI Helped Me Build Sanat Utility Studio" not in home:
+        errors.append("Featured article not visible on homepage")
 if errors:
     print("FAILED - site validation:")
     for error in errors:
