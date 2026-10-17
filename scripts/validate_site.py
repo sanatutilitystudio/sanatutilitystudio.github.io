@@ -183,6 +183,27 @@ for page in site.rglob("*.html"):
     if nav.links != expected_nav:
         errors.append(f"Navigation differs in {page.relative_to(site)}: {nav.links}")
 
+# Homepage has a balanced studio/software/journal/AI-lab introduction.
+homepage = site / "index.html"
+if homepage.is_file():
+    homepage_html = homepage.read_text(encoding="utf-8")
+    for fragment in (
+        "Building useful software.",
+        "Exploring technology.",
+        "Development Stories &amp; Technology Insights.",
+        "Stories from building independent software, practical tutorials",
+        "with each application designed around a specific practical need.",
+        "Apps &amp; Tools",
+        "Studio Journal",
+        "Experiments &amp; AI Lab",
+        "About the Developer",
+    ):
+        if fragment not in homepage_html:
+            errors.append("Homepage editorial/navigation element missing: " + fragment)
+    for url in ("/#products", "/blog/", "/blog/categories/ai-lab/", "/about-developer/"):
+        if f'class="studio-explore-row" href="{url}"' not in homepage_html:
+            errors.append("Homepage discovery link missing: " + url)
+
 if errors:
     print("FAILED - site validation:")
     for error in errors:
