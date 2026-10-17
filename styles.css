@@ -151,3 +151,9 @@ body[class*="product-"] .contact-email{
 @media(max-width:1000px){.studio-hero-grid{grid-template-columns:1fr;gap:3rem}.studio-hero h1{font-size:clamp(2.7rem,8vw,5rem)}.studio-index{max-width:650px}}
 @media(max-width:550px){.studio-hero h1{font-size:clamp(2.5rem,9.7vw,3.5rem)}.studio-explore-row{grid-template-columns:37px minmax(0,1fr) 16px;padding:1rem .1rem}.studio-explore-copy strong{font-size:.96rem}}
 @media(prefers-reduced-motion:reduce){.studio-explore-row,.studio-explore-arrow{transition:none}}
+
+/* Sanat Relay: match the other Windows product layouts. */
+.product-srda .product-hero h1{font-size:clamp(2.5rem,5vw,4.7rem)}
+.product-srda .product-visual{display:flex;align-items:center;background:#101722;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.65rem;overflow:hidden}
+.product-srda .product-visual img{width:100%;height:auto;border-radius:6px}
+.product-srda .desktop-showcase figcaption{padding:.55rem .75rem;color:#4b5362;font-size:.85rem}
