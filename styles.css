@@ -157,3 +157,21 @@ body[class*="product-"] .contact-email{
 .product-srda .product-visual{display:flex;align-items:center;background:#101722;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:.65rem;overflow:hidden}
 .product-srda .product-visual img{width:100%;height:auto;border-radius:6px}
 .product-srda .desktop-showcase figcaption{padding:.55rem .75rem;color:#4b5362;font-size:.85rem}
+
+/* Sanat Relay plain-language product explanation */
+.srda-intro-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(2rem,5vw,5rem)}
+.srda-intro-grid h2{max-width:560px}
+.srda-prose{max-width:670px;color:#454c57;font-size:1.02rem}
+.srda-prose p+p{margin-top:1.3rem}
+.srda-prose strong{color:#181e28}
+.srda-how{background:#e8e5dc}
+.srda-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.srda-step{border-top:1px solid rgba(18,21,27,.25);padding:1.2rem .65rem 0 0}
+.srda-step-no{display:block;font-family:"Sora",sans-serif;color:#315fae;font-weight:700;font-size:.78rem;letter-spacing:.1em;margin-bottom:1rem}
+.srda-step h3{font-size:1.12rem;line-height:1.3}
+.srda-step p{font-size:.93rem;color:#535a66}
+.srda-example{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:2.5rem;border-top:1px solid rgba(18,21,27,.22);margin-top:3.2rem;padding-top:2.1rem}
+.srda-example h3{font-size:clamp(1.4rem,2.8vw,2rem)}
+.srda-example p{color:#454c57}
+@media(max-width:920px){.srda-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.srda-intro-grid{grid-template-columns:1fr;gap:1.6rem}}
+@media(max-width:600px){.srda-steps,.srda-example{grid-template-columns:1fr}.srda-example{gap:.5rem}}
