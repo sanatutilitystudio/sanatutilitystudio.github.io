@@ -57,3 +57,12 @@
 .journal-card-featured .journal-featured-label{margin:0 0 .6rem}
 .journal-card-featured .journal-text-link{margin-top:auto;padding-top:1rem}
 @media(max-width:760px){.journal-featured-story{grid-template-columns:1fr}.journal-featured-visual{min-height:180px}.journal-archive-pair{grid-template-columns:1fr;max-width:520px}}
+
+/* Featured journal cards sit inside the homepage's light section. Keep their dark surfaces legible. */
+.journal-home .journal-featured-visual,
+.journal-home .journal-card { color: var(--text); }
+.journal-home .journal-featured-visual strong,
+.journal-home .journal-card h3 a { color: var(--text); }
+.journal-home .journal-card > p:not(.journal-kicker),
+.journal-home .journal-card .journal-kicker { color: var(--muted); }
+.journal-home .journal-toolbar > a { color: #315fae; }
