@@ -106,7 +106,7 @@ if article_page.is_file():
     for image in approved_images:
         if 'src="/' + image + '"' not in html:
             errors.append("Article image missing: " + image)
-    if "Before the websites, there were Nokia themes" not in html:
+    if "Nokia themes and KD Player skins" not in html:
         errors.append("Missing feature-phone chapter")
     for asset_name in (
         "kd-player-playback-representative.webp",
