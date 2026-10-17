@@ -114,3 +114,16 @@ body[class*="product-"] .contact-email{
 .legal-note{margin-top:1rem;padding:1rem 1.1rem;border-left:3px solid var(--product);background:#0b1018;color:#cbd2dc}
 @media(max-width:760px){.paycalc-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.legal-main{padding:3.7rem 0 4.5rem}}
 @media(max-width:460px){.paycalc-gallery{grid-template-columns:1fr}}
+
+/* Privacy-first optional analytics notice. */
+.sus-consent{position:fixed;z-index:1000;left:1rem;right:1rem;bottom:1rem;width:min(740px,calc(100% - 2rem));margin-inline:auto;display:flex;gap:1.2rem;align-items:center;justify-content:space-between;padding:1.1rem 1.2rem;color:#f6f5f1;background:#141c27;border:1px solid #65738a;border-radius:12px;box-shadow:0 15px 40px rgba(0,0,0,.45);font-size:.91rem;line-height:1.5}
+.sus-consent-copy{flex:1;min-width:0}
+.sus-consent-copy strong{font-size:.99rem}
+.sus-consent-copy p{margin:.3rem 0 0;color:#d6dbe4}
+.sus-consent-copy a{color:#a9c8ff;text-decoration:underline;text-underline-offset:2px}
+.sus-consent-actions{display:flex;gap:.6rem;flex-shrink:0}
+.sus-consent-actions button{font:inherit;font-weight:700;font-size:.86rem;border-radius:7px;border:1px solid #7b8799;background:transparent;color:#fff;padding:.67rem .9rem;cursor:pointer}
+.sus-consent-actions .sus-consent-accept{background:#f2f0e9;color:#10151d;border-color:#f2f0e9}
+.sus-consent-actions button:focus-visible,#sus-analytics-preferences:focus-visible{outline:3px solid #a9c8ff;outline-offset:3px}
+#sus-analytics-preferences{font:inherit;font-weight:700;cursor:pointer;padding:.65rem 1rem;border:1px solid #7b8799;border-radius:7px;background:#171e28;color:#f6f5f1}
+@media(max-width:600px){.sus-consent{flex-direction:column;align-items:stretch;gap:.9rem;bottom:.5rem;left:.5rem;right:.5rem;width:calc(100% - 1rem);padding:1rem}.sus-consent-actions{display:grid;grid-template-columns:1fr 1fr}.sus-consent-actions button{min-height:44px}}
