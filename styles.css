@@ -127,3 +127,10 @@ body[class*="product-"] .contact-email{
 .sus-consent-actions button:focus-visible,#sus-analytics-preferences:focus-visible{outline:3px solid #a9c8ff;outline-offset:3px}
 #sus-analytics-preferences{font:inherit;font-weight:700;cursor:pointer;padding:.65rem 1rem;border:1px solid #7b8799;border-radius:7px;background:#171e28;color:#f6f5f1}
 @media(max-width:600px){.sus-consent{flex-direction:column;align-items:stretch;gap:.9rem;bottom:.5rem;left:.5rem;right:.5rem;width:calc(100% - 1rem);padding:1rem}.sus-consent-actions{display:grid;grid-template-columns:1fr 1fr}.sus-consent-actions button{min-height:44px}}
+
+/* Navigation overflow protection on tablets and small laptops. */
+@media (min-width:721px) and (max-width:900px) {
+  .nav-toggle {display:inline-flex}
+  .site-nav {position:absolute;top:70px;left:.75rem;right:.75rem;display:none;flex-direction:column;align-items:stretch;padding:1rem;border:1px solid var(--line);background:#0b0f16}
+  .site-nav.open {display:flex}
+}

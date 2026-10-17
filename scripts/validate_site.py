@@ -137,6 +137,49 @@ for page_name in ("index.html", "kcallog.html", "blog/index.html", "about-develo
     if (site / page_name).is_file() and 'href="/privacy/"' not in (site / page_name).read_text(encoding="utf-8"):
         errors.append("Privacy link missing from " + page_name)
 
+
+# All rendered pages share one navigation structure; SRDA stays in the product
+# catalogue but is no longer a top-level navigation item.
+expected_nav = [
+    ("/#products", "Products"),
+    ("/blog/", "Journal"),
+    ("/about-developer/", "About"),
+    ("/#contact", "Contact"),
+    ("https://play.google.com/store/apps/dev?id=5307424891002541633", "Google Play"),
+]
+for page in site.rglob("*.html"):
+    html = page.read_text(encoding="utf-8")
+    if 'id="site-nav"' not in html:
+        continue
+    from html.parser import HTMLParser as _Parser
+    class _NavParser(_Parser):
+        def __init__(self):
+            super().__init__()
+            self.in_nav = False
+            self.in_a = False
+            self.current = None
+            self.links = []
+        def handle_starttag(self, tag, attrs):
+            a = dict(attrs)
+            if tag == "nav" and a.get("id") == "site-nav":
+                self.in_nav = True
+            elif self.in_nav and tag == "a":
+                self.current = [a.get("href"), ""]
+                self.in_a = True
+        def handle_data(self, data):
+            if self.in_nav and self.in_a:
+                self.current[1] += data
+        def handle_endtag(self, tag):
+            if tag == "a" and self.in_nav and self.in_a:
+                self.links.append(tuple(x.strip() if x else x for x in self.current))
+                self.in_a = False
+            elif tag == "nav" and self.in_nav:
+                self.in_nav = False
+    nav = _NavParser()
+    nav.feed(html)
+    if nav.links != expected_nav:
+        errors.append(f"Navigation differs in {page.relative_to(site)}: {nav.links}")
+
 if errors:
     print("FAILED - site validation:")
     for error in errors:
