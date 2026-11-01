@@ -6,10 +6,16 @@ description: "Reverse Engineer Anything brings AI agents into software analysis.
 categories: [tech-updates]
 tags: [reverse-engineering, ai, open-source, developer-tools, software-pricing]
 author: "Sanat Utility Studio"
+image: "/assets/sus-rea-ai-reverse-engineering.jpg"
 published: true
 sitemap: true
 permalink: /blog/ai-reverse-engineering-developers-users/
 ---
+
+<figure class="journal-archive-gallery">
+  <img src="/assets/sus-rea-ai-reverse-engineering.jpg" width="1535" height="579" decoding="async" alt="Conceptual illustration of an AI assistant examining application code through a magnifying glass.">
+  <figcaption>AI-assisted software analysis. Conceptual artwork, not an actual REA interface or tested workflow.</figcaption>
+</figure>
 
 Imagine spending months building an application, refining its features, fixing bugs and making everything work smoothly. Then someone arrives with an AI assistant and asks it to figure out how your software works.
 
@@ -64,6 +70,11 @@ AI-assisted reverse engineering can support legitimate research, but it could al
 Developers deserve to be paid for their work. Making software easier to analyze should not become an excuse to appropriate someone else's work.
 
 ## Consumers have a point, too
+
+<figure class="journal-archive-gallery">
+  <img src="/assets/sus-rea-developers-and-users.jpg" width="1672" height="941" loading="lazy" decoding="async" alt="Illustration contrasting a concerned software company and an everyday user looking for affordable software alternatives.">
+  <figcaption>Software makers and everyday users have different interests in this debate. Illustration only; not a chart of actual financial results.</figcaption>
+</figure>
 
 Now consider the other side.
 
@@ -141,4 +152,4 @@ And perhaps, somewhere along the way, we can keep the calculator free.
 
 ### Editorial note
 
-This article discusses the potential implications of AI-assisted reverse engineering. Sanat Utility Studio has not independently benchmarked REA or verified claims that it can reproduce specific commercial applications. The legal discussion is general information, not legal advice.
+This article discusses the potential implications of AI-assisted reverse engineering. The illustrations are conceptual. Sanat Utility Studio has not independently benchmarked REA or verified claims that it can reproduce specific commercial applications. The legal discussion is general information, not legal advice.
