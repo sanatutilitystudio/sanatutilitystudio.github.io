@@ -17,7 +17,7 @@ permalink: /blog/can-hackers-bring-gta-vi-to-pc-before-rockstar/
   <figcaption>Official Grand Theft Auto VI artwork © Rockstar Games, used here for editorial commentary.</figcaption>
 </figure>
 
-Rockstar has confirmed that *Grand Theft Auto VI* is arriving on November 19, 2026, for PlayStation 5 and Xbox Series X|S. For PC players, the announcement came with one familiar omission: no PC version, and no official release date for one.
+Rockstar has confirmed that *Grand Theft Auto VI* is arriving on November 19, 2026, for PlayStation 5 and Xbox Series X and Series S. For PC players, the announcement came with one familiar omission: no PC version, and no official release date for one.
 
 If you've followed Rockstar for a while, this probably sounds familiar. *GTA V* originally reached consoles in September 2013, but its PC version arrived in April 2015. *Red Dead Redemption 2* also made PC players wait after its console debut. Waiting is practically a side activity in Rockstar games, except this one happens before you get to play.
 
