@@ -73,7 +73,7 @@ We should also be careful with the word “running.” A game displaying its ope
 
 Some people imagine a different shortcut: perhaps an unfinished PC build could leak, or someone could somehow turn the console files into a working Windows release.
 
-But a leak would not magically remove the need for compatible code, dependencies, graphics support, and substantial testing. And as of this draft, Rockstar has not announced a PC edition of GTA VI. Claims of a ready-to-play leaked Windows version should be treated with extreme suspicion unless there is extraordinary, verifiable evidence.
+But a leak would not magically remove the need for compatible code, dependencies, graphics support, and substantial testing. Rockstar has not announced a PC edition of GTA VI, either. Claims of a ready-to-play leaked Windows version should be treated with extreme suspicion unless there is extraordinary, verifiable evidence.
 
 We also shouldn't confuse an official PC port with emulation. Rockstar's own engineers can make platform-specific changes, optimize performance, and fix issues using tools and source code that outside emulator developers simply do not have.
 
