@@ -12,8 +12,6 @@ sitemap: true
 permalink: /blog/five-ai-projects-that-feel-like-science-fiction/
 ---
 
-*A convincing video call, an AI that learned to talk by listening, a world that creates itself as you explore, a robot learning household chores, and brain signals turning into text. Five research projects I couldn't ignore.*
-
 I follow AI developments partly out of curiosity and partly because I enjoy building software myself. Most announcements are easy to scroll past. A model gets faster, a benchmark improves, someone adds another impressive-looking chart.
 
 Then, every so often, something makes me stop and watch the demonstration twice.
