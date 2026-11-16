@@ -16,3 +16,7 @@ This content lives on the GitHub branch `draft/eliza-editorial-2026-11`, **not o
 Review the article and imagery. Copy all three images into `/assets` and replace their `docs/editorial-drafts` references (including front matter). Set a publication date. Move the draft to `_posts`, change `published: true` and `sitemap: true`, then build, inspect mobile layout and links, and push to main **only with explicit publication approval**.
 
 The GitHub repository is public, so branch source is viewable through GitHub; this does not make the post appear on the SUS website.
+
+## Portrait display fix, 16 November 2026
+
+A credited copy of the 2005 Weizenbaum portrait is hosted at `/assets/eliza/joseph-weizenbaum-ulrich-hansen-2005.jpg` on the main website, including `assets/eliza/PHOTO-CREDITS.txt` with photographer and licence. The unpublished Jekyll draft references that URL. Its standalone preview embeds the JPEG as a data URI so it displays in mobile viewers without a separate asset request. The source image is unmodified, from Wikimedia Commons.

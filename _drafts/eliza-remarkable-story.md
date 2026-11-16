@@ -27,7 +27,7 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 <p>Computing looked rather different then. ELIZA ran on MIT's Compatible Time-Sharing System, or CTSS. Instead of opening a chat app, users communicated through text terminals, sometimes using a Teletype machine that printed the exchange onto paper.</p>
 <p>Weizenbaum named his program after Eliza Doolittle from George Bernard Shaw's <em>Pygmalion</em>, a character whose speech is transformed through instruction. The name suited a program that could be given different conversational scripts.</p>
 <figure class="journal-archive-gallery">
-  <img src="/docs/editorial-drafts/eliza/images/joseph-weizenbaum-2005.jpg" width="320" height="343" loading="lazy" decoding="async" alt="Computer scientist Joseph Weizenbaum photographed in Berlin in 2005.">
+  <img src="/assets/eliza/joseph-weizenbaum-ulrich-hansen-2005.jpg" width="320" height="343" loading="lazy" decoding="async" alt="Portrait of Joseph Weizenbaum, creator of ELIZA, photographed by Ulrich Hansen in Berlin in 2005.">
   <figcaption>Joseph Weizenbaum in Berlin, 2005. Photograph: Ulrich Hansen, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Joseph_Weizenbaum.jpg">Wikimedia Commons</a>.</figcaption>
 </figure>
 

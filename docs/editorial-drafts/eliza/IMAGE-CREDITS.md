@@ -7,3 +7,5 @@
 **joseph-weizenbaum-2005.jpg** · 320×343 photograph by **Ulrich Hansen** (Berlin, 11 February 2005), unmodified. Source https://commons.wikimedia.org/wiki/File:Joseph_Weizenbaum.jpg , licence https://creativecommons.org/licenses/by-sa/3.0/ . Credit in published caption and observe CC BY-SA 3.0 terms.
 
 Sources: https://doi.org/10.1145/365153.365168 ; https://findingeliza.org/doctor.html ; https://arxiv.org/abs/2501.06707 ; https://github.com/rupertl/eliza-ctss .
+
+**Stable hosted portrait:** https://sanatutilitystudio.github.io/assets/eliza/joseph-weizenbaum-ulrich-hansen-2005.jpg. The copy is unmodified and served as image/jpeg, 320×343. Source credit and CC BY-SA 3.0 licence remain in the visible figure caption and the adjacent `/assets/eliza/PHOTO-CREDITS.txt` file.
