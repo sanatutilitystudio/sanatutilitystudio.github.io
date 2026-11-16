@@ -20,3 +20,9 @@ The GitHub repository is public, so branch source is viewable through GitHub; th
 ## Portrait display fix, 16 November 2026
 
 A credited copy of the 2005 Weizenbaum portrait is hosted at `/assets/eliza/joseph-weizenbaum-ulrich-hansen-2005.jpg` on the main website, including `assets/eliza/PHOTO-CREDITS.txt` with photographer and licence. The unpublished Jekyll draft references that URL. Its standalone preview embeds the JPEG as a data URI so it displays in mobile viewers without a separate asset request. The source image is unmodified, from Wikimedia Commons.
+
+## Editorial image revision — 16 November 2026
+
+The 2005 color portrait is no longer used in this ELIZA draft. The early biography now uses the 1982 RIT black-and-white portrait; a separate documentary-era terminal photograph is positioned near the later history section. Both are embedded in the self-contained HTML preview so mobile file viewers work without external image downloads. Original AI editorial images remain unchanged.
+
+**Rights gate before release:** RIT's portrait is public domain in the US per Wikimedia Commons, but its copyright status outside the US is not universally resolved. The user-supplied terminal photo's photographer, definitive archival identity and reproduction permission are unconfirmed. Do not publish either image to the live SUS site until rights review is complete. The draft branch is a public GitHub branch, not a private repository.
