@@ -17,3 +17,11 @@ Sources: https://doi.org/10.1145/365153.365168 ; https://findingeliza.org/doctor
 2. **Terminal scene**: `images/weizenbaum-terminal-archive-unverified.jpeg` (1501×1200). User-supplied period photograph featuring Weizenbaum at a large terminal, with people including a film cameraman. Background reference: Weizenbaum-Institut https://www.weizenbaum-institut.de/ and photograph credits at https://jw.weizenbaum-institut.de/impressum . That institute cites a 1965 *DIE ZEIT* computer-access demonstration photo in the documentary archive *Weizenbaum: Rebel at Work*, **but the supplied frame has not been conclusively matched** to that entry. Specific photographer, date and redistribution licence are unknown. **Not cleared for live publication**; seek permission or a licensed replacement before releasing.
 
 The previous CC BY-SA 3.0 color portrait by Ulrich Hansen remains an unrelated public asset from earlier work but is no longer referenced in this ELIZA article.
+
+## Replacement illustration | 16 November 2026
+
+File: `images/weizenbaum-terminal-editorial-illustration.webp` (1402 x 1122), a user-approved AI-generated monochrome ink-wash/editorial artwork based closely on the earlier historical photograph of Weizenbaum at a computer terminal. Selected published-facing caption: "Joseph Weizenbaum at an early computer terminal, reimagined as an editorial illustration."
+
+Editorial source status: The image is an illustration, not a documentary photograph. It retains the arrangement and subjects of the historical photograph, so generating it **does not automatically resolve the source photograph's derivative-work copyright requirements**. Before public release, assess clearance of the original composition or replace with a more independently composed scene.
+
+The previous user-supplied original image `weizenbaum-terminal-archive-unverified.jpeg` is removed from the current branch file tree. Previously committed Git objects may remain retrievable in repository history.

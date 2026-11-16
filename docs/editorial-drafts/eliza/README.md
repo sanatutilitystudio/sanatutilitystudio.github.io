@@ -26,3 +26,7 @@ A credited copy of the 2005 Weizenbaum portrait is hosted at `/assets/eliza/jose
 The 2005 color portrait is no longer used in this ELIZA draft. The early biography now uses the 1982 RIT black-and-white portrait; a separate documentary-era terminal photograph is positioned near the later history section. Both are embedded in the self-contained HTML preview so mobile file viewers work without external image downloads. Original AI editorial images remain unchanged.
 
 **Rights gate before release:** RIT's portrait is public domain in the US per Wikimedia Commons, but its copyright status outside the US is not universally resolved. The user-supplied terminal photo's photographer, definitive archival identity and reproduction permission are unconfirmed. Do not publish either image to the live SUS site until rights review is complete. The draft branch is a public GitHub branch, not a private repository.
+
+## Illustration replacement | 16 November 2026
+
+Replaced the user-supplied documentary-era photo with `docs/editorial-drafts/eliza/images/weizenbaum-terminal-editorial-illustration.webp` and updated the caption in the draft and self-contained review HTML. The original unlicensed photo file is deleted from the latest draft branch tree. The approved illustration is a very close interpretation of the historical reference, so rights for its source composition still require review before publication. Do not treat the illustration as public-domain archival material.

@@ -57,8 +57,8 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 <p>ELIZA became famous, but the code behind the original version did not circulate in the way the name did.</p>
 <p>Weizenbaum's 1966 paper described the algorithm and printed the DOCTOR script, not a complete listing of the ELIZA engine. Other programmers recreated versions in different languages. Bernie Cosell produced a particularly influential Lisp implementation, and later home-computer versions helped keep ELIZA alive in popular memory.</p>
 <figure class="journal-archive-gallery">
-  <img src="/docs/editorial-drafts/eliza/images/weizenbaum-terminal-archive-unverified.jpeg" width="1501" height="1200" style="display:block;width:100%;max-width:780px;height:auto;margin:0 auto;" loading="lazy" decoding="async" alt="Archival photograph of Joseph Weizenbaum using an early computer terminal while two men, including a cameraman, look on.">
-  <figcaption>Joseph Weizenbaum at an early computer terminal.</figcaption>
+  <img src="/docs/editorial-drafts/eliza/images/weizenbaum-terminal-editorial-illustration.webp" width="1402" height="1122" style="display:block;width:100%;max-width:780px;height:auto;margin:0 auto;" loading="eager" decoding="async" alt="Monochrome editorial illustration depicting Joseph Weizenbaum at an early computer terminal with a cameraman and an observer.">
+  <figcaption>Joseph Weizenbaum at an early computer terminal, reimagined as an editorial illustration.</figcaption>
 </figure>
 <p>For years, the originals remained difficult to study. Then, in <strong>2021</strong>, computer scientist <strong>Jeff Shrager</strong>, working with MIT archivist <strong>Myles Crowley</strong>, located a listing among Weizenbaum's archived papers. A folder marked <em>Computer Conversations</em> contained the original MAD-SLIP source and an early DOCTOR script.</p>
 <p>It wasn't a forgotten GitHub repository, obviously. It was printed source code in an archive. A rather good reminder that the cloud has not always been the universal answer to file management.</p>
