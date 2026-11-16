@@ -15,7 +15,7 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 
 <figure class="journal-archive-gallery">
   <img src="/docs/editorial-drafts/eliza/images/eliza-hero-1960s-imagined.webp" width="1672" height="941" decoding="async" alt="Artist's imagined 1960s university computing laboratory, with students gathered around a fictional ELIZA screen displaying its famous opening conversation.">
-  <figcaption>Editorial reconstruction generated with AI. The conversation was printed in Weizenbaum's 1966 paper; the people and CRT screen arrangement are imagined, not an archival photograph. Historical ELIZA was used through text terminals, including paper-printing teletypes.</figcaption>
+  <figcaption>An imagined encounter with ELIZA in the 1960s. Editorial illustration.</figcaption>
 </figure>
 
 <p>A sample conversation published in 1966 began with someone telling a computer that men were all alike. The computer replied, &quot;IN WHAT WAY&quot;. Soon it was asking for a specific example, as though it were genuinely interested in the person's problems.</p>
@@ -28,7 +28,7 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 <p>Weizenbaum named his program after Eliza Doolittle from George Bernard Shaw's <em>Pygmalion</em>, a character whose speech is transformed through instruction. The name suited a program that could be given different conversational scripts.</p>
 <figure class="journal-archive-gallery">
   <img src="/docs/editorial-drafts/eliza/images/weizenbaum-1982-rit.webp" width="692" height="1017" style="display:block;width:100%;max-width:400px;height:auto;margin:0 auto;" loading="lazy" decoding="async" alt="Black-and-white seated portrait of Joseph Weizenbaum, published in 1982.">
-  <figcaption>Joseph Weizenbaum, 1982. <a href="https://commons.wikimedia.org/wiki/File:Weizenbaum_1982.jpg">Rochester Institute of Technology, <em>News &amp; Events</em></a>, via Wikimedia Commons. Public domain in the United States.</figcaption>
+  <figcaption>Joseph Weizenbaum, 1982. <a href="https://commons.wikimedia.org/wiki/File:Weizenbaum_1982.jpg">Rochester Institute of Technology</a> / Wikimedia Commons.</figcaption>
 </figure>
 
 <p>Its most famous script was called <strong>DOCTOR</strong>, which imitated the questioning style of a nondirective psychotherapist. The program encouraged the person to keep talking, reflected their own words back at them, and sometimes asked about family or feelings.</p>
@@ -43,7 +43,7 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 <p>The original system also had keyword priorities, different response choices and a limited mechanism for returning to something the user had said earlier. It was more sophisticated than a single collection of &quot;if this word, say that sentence&quot; commands, but it never needed to understand what a mother or family actually was.</p>
 <figure class="journal-archive-gallery">
   <img src="/docs/editorial-drafts/eliza/images/eliza-conversation-editorial.webp" width="1672" height="941" loading="lazy" decoding="async" alt="Editorial illustration of ELIZA's famous conversation presented as text surrounded by punch-card and printed-paper motifs.">
-  <figcaption>Our editorial rendering of the famous exchange. This is a modern illustration, not a screenshot from the original 1960s system. Transcript: Weizenbaum, 1966.</figcaption>
+  <figcaption>ELIZA's 1966 conversation, recreated as an editorial illustration.</figcaption>
 </figure>
 
 <p>The surprising part is how much meaning <em>we</em> supply. When a machine asks about our family immediately after we mention our mother, we're inclined to imagine that it has followed the conversation. Sometimes all it has done is spot a keyword.</p>
@@ -58,7 +58,7 @@ permalink: /blog/chatbots-didnt-begin-with-chatgpt-eliza/
 <p>Weizenbaum's 1966 paper described the algorithm and printed the DOCTOR script, not a complete listing of the ELIZA engine. Other programmers recreated versions in different languages. Bernie Cosell produced a particularly influential Lisp implementation, and later home-computer versions helped keep ELIZA alive in popular memory.</p>
 <figure class="journal-archive-gallery">
   <img src="/docs/editorial-drafts/eliza/images/weizenbaum-terminal-archive-unverified.jpeg" width="1501" height="1200" style="display:block;width:100%;max-width:780px;height:auto;margin:0 auto;" loading="lazy" decoding="async" alt="Archival photograph of Joseph Weizenbaum using an early computer terminal while two men, including a cameraman, look on.">
-  <figcaption>Weizenbaum at an early computer terminal. <a href="https://jw.weizenbaum-institut.de/impressum">Weizenbaum-Institut archival context</a>. Exact date, photographer and reuse rights for this photograph still require verification.</figcaption>
+  <figcaption>Joseph Weizenbaum at an early computer terminal.</figcaption>
 </figure>
 <p>For years, the originals remained difficult to study. Then, in <strong>2021</strong>, computer scientist <strong>Jeff Shrager</strong>, working with MIT archivist <strong>Myles Crowley</strong>, located a listing among Weizenbaum's archived papers. A folder marked <em>Computer Conversations</em> contained the original MAD-SLIP source and an early DOCTOR script.</p>
 <p>It wasn't a forgotten GitHub repository, obviously. It was printed source code in an archive. A rather good reminder that the cloud has not always been the universal answer to file management.</p>
