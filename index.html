@@ -49,11 +49,14 @@
           <span class="studio-explore-copy"><strong>Studio Journal</strong><span>Development stories, tutorials and technology insights</span></span>
           <span class="studio-explore-arrow" aria-hidden="true">&rarr;</span>
         </a>
+        {% assign lab_posts = site.categories["ai-lab"] %}
+        {% if lab_posts.size > 0 %}
         <a class="studio-explore-row" href="/blog/categories/ai-lab/">
           <span class="studio-explore-mark" aria-hidden="true">LAB</span>
           <span class="studio-explore-copy"><strong>Experiments &amp; AI Lab</strong><span>Local AI, developer experiments and prototypes</span></span>
           <span class="studio-explore-arrow" aria-hidden="true">&rarr;</span>
         </a>
+        {% endif %}
         <a class="studio-explore-row" href="/about-developer/">
           <span class="studio-explore-mark" aria-hidden="true">DEV</span>
           <span class="studio-explore-copy"><strong>About the Developer</strong><span>The person and curiosity behind the studio</span></span>

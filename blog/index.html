@@ -6,7 +6,7 @@ description: "Independent software development, developer tools, technology upda
 <div class="container journal-wrap">
   <header class="journal-heading"><p class="eyebrow">Sanat Utility Studio / Articles</p><h1>Apps, AI & Developer Insights.</h1><p>Notes on building useful software, exploring developer tools and AI, and making sense of developments across technology.</p></header>
   <nav class="journal-categories" aria-label="Article categories">
-  {% for cat in site.data.journal_categories %}<a href="/blog/categories/{{ cat.slug }}/">{{ cat.label | escape }}</a>{% endfor %}
+  {% for cat in site.data.journal_categories %}{% assign category_posts = site.categories[cat.slug] %}{% if category_posts.size > 0 %}<a href="/blog/categories/{{ cat.slug }}/">{{ cat.label | escape }}</a>{% endif %}{% endfor %}
   </nav>
   <div class="journal-toolbar"><h2>Latest articles</h2><a href="/blog/search/">Search articles →</a></div>
   {% assign listed_posts = paginator.posts | default: site.posts %}

@@ -8,6 +8,7 @@
   <title>{% if page.title %}{{ page.title | escape }} — {% endif %}Sanat Utility Studio</title>
   <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
   <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {% if page.category_key %}{% assign archive_posts = site.categories[page.category_key] %}{% unless archive_posts.size > 0 %}<meta name="robots" content="noindex, follow">{% endunless %}{% endif %}
   <link rel="icon" href="{{ '/assets/favicon.png' | relative_url }}">
   <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/journal.css' | relative_url }}">

@@ -195,14 +195,50 @@ if homepage.is_file():
         "with each application designed around a specific practical need.",
         "Apps &amp; Tools",
         "Studio Journal",
-        "Experiments &amp; AI Lab",
         "About the Developer",
     ):
         if fragment not in homepage_html:
             errors.append("Homepage editorial/navigation element missing: " + fragment)
-    for url in ("/#products", "/blog/", "/blog/categories/ai-lab/", "/about-developer/"):
+    for url in ("/#products", "/blog/", "/about-developer/"):
         if f'class="studio-explore-row" href="{url}"' not in homepage_html:
             errors.append("Homepage discovery link missing: " + url)
+
+# Empty archives remain reachable but must not be promoted or indexed.
+if (site / "blog/index.html").is_file() and (site / "sitemap.xml").is_file():
+    journal = (site / "blog/index.html").read_text(encoding="utf-8")
+    home = (site / "index.html").read_text(encoding="utf-8") if (site / "index.html").is_file() else ""
+    try:
+        archive_urls = {item.text for item in ET.parse(site / "sitemap.xml").findall(".//{*}loc")}
+    except ET.ParseError:
+        archive_urls = None
+    for slug in ("inside-sus", "building-with-ai", "tech-updates", "tutorials", "ai-lab"):
+        path = f"/blog/categories/{slug}/"
+        archive = site / path.lstrip("/") / "index.html"
+        if not archive.is_file():
+            continue
+        html = archive.read_text(encoding="utf-8")
+        populated = 'class="journal-empty"' not in html
+        linked = f'href="{path}"' in journal
+        noindex = 'name="robots" content="noindex, follow"' in html
+        if populated != linked or populated == noindex:
+            errors.append("Archive visibility/indexing mismatch: " + slug)
+        if archive_urls is not None and (("https://sanatutilitystudio.github.io" + path) in archive_urls) != populated:
+            errors.append("Archive sitemap mismatch: " + slug + " (remove sitemap: false when populated)")
+        if slug == "ai-lab" and (f'class="studio-explore-row" href="{path}"' in home) != populated:
+            errors.append("Homepage AI Lab visibility mismatch")
+
+# Every public product has one self-referencing canonical and practical information.
+for name in ("kcallog", "kilopic", "formal-letter-maker", "april-music", "tripura-paycalc", "audioprep-studio", "tb-restore-studio", "sanat-relay"):
+    page = site / (name + ".html")
+    if not page.is_file():
+        continue
+    html = page.read_text(encoding="utf-8")
+    canonical = f'<link rel="canonical" href="https://sanatutilitystudio.github.io/{name}.html">'
+    if html.count('rel="canonical"') != 1 or canonical not in html:
+        errors.append("Invalid product canonical: " + name)
+    marker = 'id="srda-security-heading"' if name == "sanat-relay" else 'aria-label="Practical workflow"'
+    if marker not in html:
+        errors.append("Missing product information: " + name)
 
 if errors:
     print("FAILED - site validation:")
